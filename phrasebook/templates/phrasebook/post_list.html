@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Useful Finnish phrases</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Useful Finnish phrases</a></h1>
+        </div>
+
+        {% for post in posts %}
+            <div>
+                <table border="1">
+                    <tr>
+                        <td>{{ post.connector|linebreaks }}</td>
+                        <td>{{ post.contransl|linebreaks }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ post.examplesent|linebreaks }}</td>
+                        <td>{{ post.exampletransl|linebreaks }}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"> {{ post.usagenotes|linebreaks }}  </td>
+                    </tr>
+                </table>
+
+            </div>
+            <br>
+        {% endfor %}
+    </body>
+</html>
