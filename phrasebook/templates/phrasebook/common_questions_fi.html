@@ -1,0 +1,26 @@
+{% extends 'phrasebook/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <table border="1">
+                <tr>
+                    <td>{{ post.connector|linebreaks }}</td>
+                    <td>{{ post.contransl|linebreaks }}</td>
+                </tr>
+                <tr>
+                    <td>{{ post.examplesent|linebreaks }}
+                        <div class = "nappiteksti">
+                            <a onclick="this.firstChild.play()"><audio src="{{ post.audiofilulinkki }}"></audio>PLAY</a>
+                        </div>
+                    </td>
+                    <td>{{ post.exampletransl|linebreaks }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"> {{ post.usagenotes|linebreaks }}  </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+    {% endfor %}
+{% endblock %}

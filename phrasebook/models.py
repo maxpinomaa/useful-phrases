@@ -13,6 +13,9 @@ class Convcon(models.Model):
         default=timezone.now)
     published_date = models.DateTimeField(
         blank=True, null=True)
+    audiofilulinkki = models.CharField(max_length=200)
+
+
 
 
     def publish(self):
