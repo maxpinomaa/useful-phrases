@@ -1,0 +1,11 @@
+{% extends 'phrasebook/base.html' %}
+
+{% block content %}
+<p>testii</p>
+    <h1>New post</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+<p>more testii</p>
+{% endblock %}

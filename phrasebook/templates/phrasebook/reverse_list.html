@@ -1,0 +1,27 @@
+{% extends 'phrasebook/base.html' %}
+
+{% block title %}Italian maybe soon{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <table border="1" style="width:100%">
+                <tr>
+                    <td>{{ post.connector|linebreaks }}</td>
+                    <td>{{ post.contransl|linebreaks }}</td>
+                </tr>
+                <tr>
+                    <td>{{ post.examplesent|linebreaks }}
+                            <a onclick="this.firstChild.play()"><audio src="{{ post.audiofilulinkki }}"></audio>
+                                <img src="/static/play.png"></a>
+                    </td>
+                    <td>{{ post.exampletransl|linebreaks }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2"> {{ post.usagenotes|linebreaks }}  </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+    {% endfor %}
+{% endblock %}

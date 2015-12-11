@@ -1,9 +1,11 @@
 {% extends 'phrasebook/base.html' %}
-{% block title %}Useful stuff{% endblock %}
+{% block title %}Useful Finnish phrases {% endblock %}
 {% load staticfiles %}
 
 {% block content %}
-<p>Welcome! If you want to learn Finnish, this website will be useful for you.
+<p>(This website is still under construction. I will add many more sentences and I will, for example, pay attention to the audio quality.
+But there may already be some useful material for you.)</p>
+<p>Welcome! If you want to learn Finnish, this website will probably be useful for you.
 The main example sentences will have audio which is important
 for getting used to the pronounciation. Also hearing them many times will make them easier
 to remember. They may become like music that you will hear repeating in your mind after the
@@ -13,14 +15,11 @@ actual studying.</p>
 How long have you been here? Where are you from? Do you like Finland? etc.
 This website will introduce these questions to you. Armed with them, it will be easier
 for you to have small conversations with Finns in Finnish, since you will probably understand
-most of the questions. Many foreigners complain that they cannot learn Finnish because all Finns
-speak English. Most Finns do speak English but they do not if you want to practise Finnish.</p>
+most of the questions.</p>
 <p>This site will also teach you conversational connectors. They are very useful because
 they make your sentences longer. Also they give you more thinking time for the actual information
 that you want to give the other person.</p>
 <p> <a href="#more">Here</a> you can find more ideas how to learn languages and make it more fun.</p>
-<p>You can probably think about moments in your life when you might use
-these kind of expressions.</p>
 
     {% for post in posts %}
         <div class="post">
@@ -41,6 +40,7 @@ these kind of expressions.</p>
                 </tr>
             </table>
         </div>
+        <br>
         <br>
     {% endfor %}
 <p>
