@@ -1,18 +1,12 @@
-{% extends 'phrasebook/base.html' %}
+{% extends 'phrasebook/base_ita.html' %}
 
-{% block title %}Common questions{% endblock %}
-
+{% block title %}Italian conversational connectors{% endblock %}
 
 {% block content %}
-<p>
-    Armed with these, it will be easier
-    for you to have small conversations with Finns in Finnish, since you will probably understand
-    most of the questions.
-</p>
+    <p>This is page two of the Italian conversational connectors</p>
+    <p>Translated into Italian by Gabriele Ludovici. Thanks Gabriele!</p>
+    <p>No audio and not many usage notes yet. We will most probably have them soon.</p>
 
-<p>
-    I will add many more questions here soon.
-</p>
     {% for post in posts %}
         <div class="post">
             <table border="1" style="width:100%">
@@ -22,8 +16,7 @@
                 </tr>
                 <tr>
                     <td>{{ post.examplesent|linebreaks }}
-                            <a onclick="this.firstChild.play()"><audio src="{{ post.audiofilulinkki }}"></audio>
-                                <img src="/static/play.png"></a>
+
                     </td>
                     <td>{{ post.exampletransl|linebreaks }}</td>
                 </tr>

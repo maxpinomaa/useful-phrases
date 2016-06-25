@@ -2,23 +2,38 @@
 <html>
     <head>
         <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/phrasebook.css' %}">
+
     </head>
     <body>
         <div class="page-header">
-            <h1><a href="/">Useful Finnish phrases</a></h1>
-
+            <h1 class="header-title"><a href="/">Finnish language nuggets</a></h1>
+            <div class="top-menu">
+            <ul>
+              <li><a class="active" href="http://www.languagenuggets.com/">Home</a></li>
+              <li><a href="{% url 'reverse_list' %}">Common questions Finns will ask you</a></li>
+              <li><a href="{% url 'post_list1' %}">Conversational connectors</a></li>
+              <li><a href="http://www.languagenuggets.com/#links">Links</a></li>
+            </ul>
+            </div>
         </div>
+
         <div class = "content container">
+
             <div class="row">
-                <div class="col-md-8">
+                <div class = "col-md-2">
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem.
+                    Quisque ligula eros ullamcorper quis, lacinia quis </p>
+                </div>
+                <div class="col-md-6">
                 {% block content %}
                 {% endblock %}
                 </div>
             </div>
         </div>
-        <p>Max Pinomaa 2015</p>
-        <a href="{% url 'post_new' %}">Testing a link to a new page.</a>
-        <a href="{% url 'reverse_list' %}">Testing a link to another new page.</a>
+
     </body>
 </html>

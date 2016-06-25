@@ -14,6 +14,7 @@ class Convcon(models.Model):
     published_date = models.DateTimeField(
         blank=True, null=True)
     audiofilulinkki = models.CharField(max_length=200)
+    tagi = models.CharField(max_length=15)
 
 
 

@@ -1,17 +1,37 @@
 from django.shortcuts import render
 from django.utils import timezone
 from .models import Convcon
-from .forms import PostForm
 
 def post_list(request):
-    posts = Convcon.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    posts = Convcon.objects.filter(audiofilulinkki='/static/Minuntiet.m4a') \
+        .exclude(tagi='rus_cc')
     return render(request, 'phrasebook/post_list.html', {'posts': posts})
 
-def post_new(request):
-    form = PostForm()
-    return render(request, 'phrasebook/post_edit.html', {'form': form})
-
-
 def reverse_list(request):
-    posts = Convcon.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    posts = Convcon.objects.filter(tagi='fin_cq')
     return render(request, 'phrasebook/reverse_list.html', {'posts': posts})
+
+def post_list1(request):
+    posts = Convcon.objects.filter(tagi='fin_cc').order_by('-published_date')
+    return render(request, 'phrasebook/fincc1.html', {'posts': posts})
+
+def post_list2(request):
+    posts = Convcon.objects.filter(tagi='fin_cc2').order_by('-published_date')
+    return render(request, 'phrasebook/fincc2.html', {'posts': posts})
+
+def post_list3(request):
+    posts = Convcon.objects.filter(tagi='rus_cc').order_by('-published_date')
+    return render(request, 'phrasebook/finruscc.html', {'posts': posts})
+
+def post_list4(request):
+    posts = Convcon.objects.filter(tagi='ita_cc').order_by('-published_date')
+    return render(request, 'phrasebook/eng_ita_cc.html', {'posts': posts})
+
+def post_list5(request):
+    posts = Convcon.objects.filter(tagi='ita_cc2').order_by('-published_date')
+    return render(request, 'phrasebook/eng_ita_cc.html', {'posts': posts})
+
+def post_list6(request):
+    posts = Convcon.objects.filter(tagi='fin_comics').order_by('-published_date')
+    return render(request, 'phrasebook/fin_comics.html', {'posts': posts})
+

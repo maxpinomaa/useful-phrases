@@ -1,0 +1,18 @@
+{% extends 'phrasebook/base.html' %}
+
+{% block title %}Finnish comics{% endblock %}
+
+{% block content %}
+    <br>
+    {% for post in posts %}
+        <h2>{{ post.connector|linebreaks }}</h2>
+        <p>Listen to the dialogue:
+         <a onclick="this.firstChild.play()"><audio src="{{ post.contransl }}"></audio>
+                                <img src="/static/play.png"></a>
+        </p>
+        <img src="{{ post.audiofilulinkki }}">
+        <h4>Translation and usage notes</h4>
+        {{ post.usagenotes|linebreaks }}
+    <br>
+    {% endfor %}
+{% endblock %}

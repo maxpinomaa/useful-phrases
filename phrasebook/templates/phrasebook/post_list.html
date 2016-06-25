@@ -1,25 +1,21 @@
 {% extends 'phrasebook/base.html' %}
-{% block title %}Useful Finnish phrases {% endblock %}
+{% block title %}Useful Finnish phrases{% endblock %}
 {% load staticfiles %}
 
 {% block content %}
-<p>(This website is still under construction. I will add many more sentences and I will, for example, pay attention to the audio quality.
-But there may already be some useful material for you.)</p>
-<p>Welcome! If you want to learn Finnish, this website will probably be useful for you.
+<p>Welcome! If you want to learn Finnish, this website will be useful for you.
 The main example sentences will have audio which is important
 for getting used to the pronounciation. Also hearing them many times will make them easier
-to remember. They may become like music that you will hear repeating in your mind after the
-actual studying.</p>
-<p>"You don't learn a language, you get used to it."  - Khatzumoto</p>
-<p>When you talk with new people in Finland, they usually ask you the same questions...
-How long have you been here? Where are you from? Do you like Finland? etc.
-This website will introduce these questions to you. Armed with them, it will be easier
-for you to have small conversations with Finns in Finnish, since you will probably understand
-most of the questions.</p>
-<p>This site will also teach you conversational connectors. They are very useful because
-they make your sentences longer. Also they give you more thinking time for the actual information
-that you want to give the other person.</p>
-<p> <a href="#more">Here</a> you can find more ideas how to learn languages and make it more fun.</p>
+to remember.</p>
+<p> Here you can find
+    <a href="{% url 'reverse_list' %}">common questions that Finnish people will ask you.</a>
+
+</p>
+<p>This site will also cover some conversational connectors.
+They are explained well <a href="https://sites.google.com/site/fluentczech/connectorstarterpack" target="_blank">at this website.</a>
+But in short, conversational connnectors are very useful because
+they make your sentences longer and more interesting. Also they give you more thinking time for the actual information
+you want to convey to the other person. An example:</p>
 
     {% for post in posts %}
         <div class="post">
@@ -40,50 +36,53 @@ that you want to give the other person.</p>
                 </tr>
             </table>
         </div>
-        <br>
-        <br>
     {% endfor %}
-<p>
-
-The standard Lorem Ipsum passage, used since the 1500s
-
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-
-"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-1914 translation by H. Rackham
-
-"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
-Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-
-"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
-1914 translation by H. Rackham
-
-"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
-
-</p>
-<a name="more">More</a> about language learning?</a>
 
 <p>
-
-The standard Lorem Ipsum passage, used since the 1500s
-
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-
-"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
-1914 translation by H. Rackham
-
-"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
-Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-
-"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
-1914 translation by H. Rackham
-
-"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
-
+More Finnish conversational connectors here:
+<br>
+<a href="{% url 'post_list1' %}">Page 1</a>
+<br>
+<a href="{% url 'post_list2' %}">Page 2</a>
 </p>
 
+<h3><a name="more">How to use (and how not to use) this website</a></h3>
+<p>
+For more or less serious students of Finnish, this website does not pretend to be a comprehensive language course.
+There are many ways to get fluent in a language, but usually you need a combination of different methods and materials.
+I will not, for example, teach much grammar here. There are many books and websites for that.
+<p>
+This website focuses more on conversation, the amazing world of human interaction.
+Certain expressions are very useful and fun in that world.
+</p>
+<h3><a name="links">Links for free high quality websites that teach Finnish</a></h3>
+<p><a href="http://www.surfacelanguages.com" target="_blank">Surface languages</a>
+has a nice collection of sentences in many languages, even in
+<a href="http://www.surfacelanguages.com/language/Finnish.html" target="_blank">Finnish</a>. This site has useful words and many sentences (with audio!) for different situations.
+And everything is free, including the mobile apps.</p>
+<p>Even if you only use the free version,
+<a href="http://www.lingq.com/" target="_blank">LingQ is a great website for learning languages.</a>
+It has material for Finnish too. Lingq has lots of texts with audio. Some are long. Some are short. There is also a mobile app for LingQ.</p>
+<p>Here you can find
+    <a href="http://yle.fi/uutiset/selkouutiset/" target="_blank">news in simplified Finnish with audio.</a>
+</p>
+<p>(I will add more links soon.)</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 {% endblock %}
 
 
