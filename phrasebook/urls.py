@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^engitacc1/$', views.post_list4, name='post_list4'),
     url(r'^engitacc2/$', views.post_list5, name='post_list5'),
     url(r'^fincomics/$', views.post_list6, name='post_list6'),
+    url(r'^finfunint/$', views.post_list7, name='post_list7'),
 ]

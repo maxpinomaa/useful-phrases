@@ -28,6 +28,10 @@
     margin-top:8px;
 }
 
+.little-marg {
+        background="yellow";
+}
+
 h1, h2, h3, h4 {
     font-family:'Passion one', bold;
     color: black;
@@ -49,6 +53,10 @@ h1, h2, h3, h4 {
 
 .post {
     margin-bottom: 20px;
+}
+
+.post a {
+    cursor:pointer;
 }
 
 .post h1 a, .post h1 a:visited {

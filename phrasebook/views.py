@@ -35,3 +35,7 @@ def post_list6(request):
     posts = Convcon.objects.filter(tagi='fin_comics').order_by('-published_date')
     return render(request, 'phrasebook/fin_comics.html', {'posts': posts})
 
+def post_list7(request):
+    posts = Convcon.objects.filter(tagi='fin_fun').order_by('-published_date')
+    return render(request, 'phrasebook/finfunint.html', {'posts': posts})
+
