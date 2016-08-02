@@ -1,21 +1,19 @@
-{% extends 'phrasebook/base2.html' %}
+{% extends 'phrasebook/base_rus_fin2.html' %}
 
-{% block title %}Finnish conversational connectors | pack 2{% endblock %}
+{% block title %}Conversational connectors, page 2{% endblock %}
+
 
 {% block content %}
-    <br>
-    <br>
+
     {% for post in posts %}
         <div class="post">
-            <table border="1" style="width:100%">
+            <table border="1">
                 <tr>
                     <td>{{ post.connector|linebreaks }}</td>
                     <td>{{ post.contransl|linebreaks }}</td>
                 </tr>
                 <tr>
                     <td>{{ post.examplesent|linebreaks }}
-                            <a onclick="this.firstChild.play()"><audio src="{{ post.audiofilulinkki }}"></audio>
-                                <img src="/static/play.png"></a>
                     </td>
                     <td>{{ post.exampletransl|linebreaks }}</td>
                 </tr>
@@ -24,7 +22,5 @@
                 </tr>
             </table>
         </div>
-        <br>
-        <br>
     {% endfor %}
 {% endblock %}

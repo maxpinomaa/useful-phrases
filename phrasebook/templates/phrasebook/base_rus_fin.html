@@ -1,0 +1,45 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/phrasebook.css' %}">
+
+    </head>
+    <body>
+        <div class="page-header">
+            <div class="other-languages-header">
+                <p><img src="/static/eng.png"><a href="http://www.languagenuggets.com/"> Study Finnish in English</a></p>
+            </div>
+            <h1 class="header-title"><a href="{% url 'post_list8' %}">Finnish language nuggets - финский</a></h1>
+            <div class="top-menu">
+            <ul>
+              <li><a class="active" href="{% url 'post_list8' %}">Home</a></li>
+              <li><a href="{% url 'reverse_list' %}">Common questions Finns will ask you</a></li>
+              <li><a href="{% url 'post_list3' %}">"Conversational connectors"</a></li>
+              <li><a href="http://www.languagenuggets.com/">Links (soon)</a></li>
+              <li><a href="{% url 'post_list9' %}">Смешные / интересные предложения</a></li>
+            </ul>
+            </div>
+        </div>
+
+        <div class = "content container">
+
+            <div class="row">
+                <div class = "col-md-2">
+                      <p class="visible-md visible-lg">
+                          Welcome! There will be text in Russian here.
+                      </p>
+                </div>
+                <div class="col-md-6">
+                {% block content %}
+                {% endblock %}
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>

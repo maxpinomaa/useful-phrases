@@ -1,19 +1,16 @@
-{% extends 'phrasebook/base.html' %}
-{% block title %}Finnish language nuggets{% endblock %}
+{% extends 'phrasebook/base_spanish.html' %}
+{% block title %}Spanish language nuggets{% endblock %}
 {% load staticfiles %}
 
 {% block content %}
 <div class="visible-xs visible-sm">
-<p>Welcome! If you want to learn Finnish, this website may be useful for you. We will cover many
+<p>Welcome! If you want to learn Finnish, this website may be useful for you. We will cover
                         expressions that are useful in a conversation.
 The main example sentences will have audio which is important
 for getting used to the pronounciation. Also hearing them many times will make them easier
 to memorize.</p>
 </div>
-<p> Here you can find
-    <a href="{% url 'reverse_list' %}">common questions that Finnish people will ask you.</a>
 
-</p>
 <p>This site will cover some conversational connectors.
 They are explained well <a href="https://sites.google.com/site/fluentczech/connectorstarterpack" target="_blank">at this website.</a>
 But in short, conversational connnectors are very useful because
@@ -40,6 +37,7 @@ you want to convey to the other person. An example:</p>
             </table>
         </div>
     {% endfor %}
+
 
 <h3><a name="more">How to use (and how not to use) this website</a></h3>
 <p>

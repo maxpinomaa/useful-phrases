@@ -5,14 +5,28 @@
     padding: 20px 0px 0px 0px;
 }
 
+.other-languages-header {
+    float:right;
+    margin-right:8px;
+}
+
 .page-header h1, .page-header h1 a:visited, .page-header h1 a:active {
     margin-left:20px;
     font-size: 36pt;
     text-decoration: none;
 }
 
+.news {
+    font-style:italic;
+}
+
 .header-title {
     margin-left:20px;
+}
+
+p.sign {
+    float:bottom;
+    margin-left:7;
 }
 
 .content {

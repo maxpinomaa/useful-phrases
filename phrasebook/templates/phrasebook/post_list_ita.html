@@ -1,10 +1,12 @@
-{% extends 'phrasebook/base2.html' %}
-
-{% block title %}Finnish conversational connectors | pack 2{% endblock %}
+{% extends 'phrasebook/base_eng_ita.html' %}
+{% block title %}Italian language nuggets{% endblock %}
+{% load staticfiles %}
 
 {% block content %}
-    <br>
-    <br>
+<p>Italiano</p>
+
+  <p class="visible-xs visible-sm">This text is shown only on an EXTRA SMALL screen.</p>
+
     {% for post in posts %}
         <div class="post">
             <table border="1" style="width:100%">
@@ -24,7 +26,13 @@
                 </tr>
             </table>
         </div>
-        <br>
-        <br>
     {% endfor %}
+
+<p>
+More Finnish conversational connectors here:
+<br>
+<a href="{% url 'post_list1' %}">Page 1</a>
+<br>
+<a href="{% url 'post_list2' %}">Page 2</a>
+</p>
 {% endblock %}
