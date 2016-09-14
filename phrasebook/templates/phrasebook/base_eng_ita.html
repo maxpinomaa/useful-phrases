@@ -13,11 +13,11 @@
             <h1 class="header-title"><a href="/">Italian language nuggets</a></h1>
             <div class="top-menu">
             <ul>
-              <li><a class="active" href="http://www.languagenuggets.com/italian">Home</a></li>
-              <li><a href="{% url 'reverse_list' %}">Common questions Finns will ask you</a></li>
-              <li><a href="http://www.languagenuggets.com/italian/engitacc1">Conversational connectors</a></li>
+              <li><a class="active" href="{% url 'post_list10' %}">Home</a></li>
+              <li><a href="{% url 'post_list16' %}">Common questions Italians will ask you</a></li>
+              <li><a href="{% url 'post_list4' %}">Conversational connectors</a></li>
               <li><a href="http://www.languagenuggets.com/">Links (soon)</a></li>
-              <li><a href="http://www.languagenuggets.com/finfunint">Funny/interesting sentences</a></li>
+              <li><a href="{% url 'post_list17' %}">Funny/interesting sentences</a></li>
             </ul>
             </div>
         </div>
@@ -26,7 +26,7 @@
 
             <div class="row">
                 <div class = "col-md-3 visible-md visible-lg">
-                        <p>Welcome! If you want to learn Finnish, this website may be useful for you. We will cover many
+                        <p>Welcome! If you want to learn Italian, this website may be useful for you. We will cover many
                         expressions that are useful in a conversation.
 The main example sentences will have audio which is important
 for getting used to the pronounciation. Also hearing them many times will make them easier

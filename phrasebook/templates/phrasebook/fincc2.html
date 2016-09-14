@@ -1,10 +1,9 @@
 {% extends 'phrasebook/base2.html' %}
 
-{% block title %}Finnish conversational connectors | pack 2{% endblock %}
+{% block title %}Finnish conversational connectors | page 2{% endblock %}
 
 {% block content %}
-    <br>
-    <br>
+    <h3><a href="{% url 'post_list1' %}">Page 1 </a>Page 2 </h3>
     {% for post in posts %}
         <div class="post">
             <table border="1" style="width:100%">
@@ -24,7 +23,8 @@
                 </tr>
             </table>
         </div>
-        <br>
-        <br>
     {% endfor %}
+        <h3><a href="{% url 'post_list1' %}">Page 1 </a>Page 2 </h3>
+        <br>
+        <br>
 {% endblock %}

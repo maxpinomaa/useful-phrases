@@ -3,13 +3,22 @@
 {% load staticfiles %}
 
 {% block content %}
-<p>Italiano</p>
-
-  <p class="visible-xs visible-sm">This text is shown only on an EXTRA SMALL screen.</p>
+<div class="visible-xs visible-sm">
+    <p>Welcome! If you want to learn Italian, this website may be useful for you. We will cover many
+                        expressions that are useful in a conversation.
+    The main example sentences will have audio which is important
+    for getting used to the pronounciation. Also hearing them many times will make them easier
+    to memorize.</p>
+</div>
+<p> Here you can find
+    <a href="{% url 'reverse_list' %}">common questions that Italians people will ask you.</a>
+    Knowing them it will be easier for you to have small conversations with Italians,
+    since you will know most of the questions that Italians will ask you.
+</p>
 
     {% for post in posts %}
         <div class="post">
-            <table border="1" style="width:100%">
+            <table border="1">
                 <tr>
                     <td>{{ post.connector|linebreaks }}</td>
                     <td>{{ post.contransl|linebreaks }}</td>
@@ -28,11 +37,4 @@
         </div>
     {% endfor %}
 
-<p>
-More Finnish conversational connectors here:
-<br>
-<a href="{% url 'post_list1' %}">Page 1</a>
-<br>
-<a href="{% url 'post_list2' %}">Page 2</a>
-</p>
 {% endblock %}

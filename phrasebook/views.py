@@ -29,7 +29,7 @@ def post_list4(request):
 
 def post_list5(request):
     posts = Convcon.objects.filter(tagi='ita_cc2').order_by('-published_date')
-    return render(request, 'phrasebook/eng_ita_cc.html', {'posts': posts})
+    return render(request, 'phrasebook/eng_ita_cc2.html', {'posts': posts})
 
 def post_list6(request):
     posts = Convcon.objects.filter(tagi='fin_comics').order_by('-published_date')
@@ -49,11 +49,11 @@ def post_list9(request):
     return render(request, 'phrasebook/rusfinfun.html', {'posts': posts})
 
 def post_list10(request):
-    posts = Convcon.objects.filter(tagi='ita_cc').order_by('-published_date')
+    posts = Convcon.objects.filter(connector='quando ero bambino').order_by('-published_date')
     return render(request, 'phrasebook/post_list_ita.html', {'posts': posts})
 
 def post_list11(request):
-    posts = Convcon.objects.filter(tagi='spa_cc1').order_by('-published_date')
+    posts = Convcon.objects.filter(connector='hasta donde yo sé').order_by('-published_date')
     return render(request, 'phrasebook/front_spa.html', {'posts': posts})
 
 def post_list12(request):
@@ -67,6 +67,18 @@ def post_list13(request):
 def post_list14(request):
     posts = Convcon.objects.filter(tagi='rus_cc2').order_by('-published_date')
     return render(request, 'phrasebook/finruscc2.html', {'posts': posts})
+
+def post_list15(request):
+    posts = Convcon.objects.filter(tagi='spa_cc1').order_by('-published_date')
+    return render(request, 'phrasebook/esp_cc1.html', {'posts': posts})
+
+def post_list16(request):
+    posts = Convcon.objects.filter(tagi='ita_cq').order_by('-published_date')
+    return render(request, 'phrasebook/common_questions_it.html', {'posts': posts})
+
+def post_list17(request):
+    posts = Convcon.objects.filter(tagi='fun_ita').order_by('-published_date')
+    return render(request, 'phrasebook/ita_fun.html', {'posts': posts})
 
 
 

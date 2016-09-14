@@ -3,8 +3,7 @@
 {% block title %}Italian conversational connectors{% endblock %}
 
 {% block content %}
-    <p>No audio, nor usage notes yet. We will most probably have them soon.</p>
-    <p>Translated into Italian by Gabriele Ludovici. Thanks Gabriele!</p>
+    <p>Translated into Italian by Gabriele Ludovici. The audio is also by him. Thanks a lot Gabriele!</p>
     {% for post in posts %}
         <div class="post">
             <table border="1" style="width:100%">
@@ -14,7 +13,8 @@
                 </tr>
                 <tr>
                     <td>{{ post.examplesent|linebreaks }}
-
+                            <a onclick="this.firstChild.play()"><audio src="{{ post.audiofilulinkki }}"></audio>
+                                <img src="/static/play.png"></a>
                     </td>
                     <td>{{ post.exampletransl|linebreaks }}</td>
                 </tr>
@@ -23,7 +23,8 @@
                 </tr>
             </table>
         </div>
-        <br>
-        <br>
     {% endfor %}
+    <h3>Page 1 <a href="{% url 'post_list5' %}">Page 2</a></h3>
+    <br>
+    <br>
 {% endblock %}

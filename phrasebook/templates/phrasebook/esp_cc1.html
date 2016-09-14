@@ -1,21 +1,21 @@
-{% extends 'phrasebook/base2.html' %}
-
-{% block title %}Finnish conversational connectors | pack 2{% endblock %}
+{% extends 'phrasebook/base_spanish2.html' %}
+{% load staticfiles %}
+{% block title %}Spanish conversational connectors{% endblock %}
 
 {% block content %}
-    <br>
-    <br>
+    <p>Here are some conversational connectors.
+    This website explains how to use them.
+    At the front page I also talked something about their usefulness.</p>
+    <p>These were translated into Spanish by A. Thanks a lot!</p>
     {% for post in posts %}
         <div class="post">
-            <table border="1" style="width:100%">
+            <table border='1' style="width:100%">
                 <tr>
                     <td>{{ post.connector|linebreaks }}</td>
                     <td>{{ post.contransl|linebreaks }}</td>
                 </tr>
                 <tr>
                     <td>{{ post.examplesent|linebreaks }}
-                            <a onclick="this.firstChild.play()"><audio src="{{ post.audiofilulinkki }}"></audio>
-                                <img src="/static/play.png"></a>
                     </td>
                     <td>{{ post.exampletransl|linebreaks }}</td>
                 </tr>
@@ -24,7 +24,7 @@
                 </tr>
             </table>
         </div>
-        <br>
-        <br>
     {% endfor %}
+    <br>
+    <br>
 {% endblock %}

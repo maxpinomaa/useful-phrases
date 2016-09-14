@@ -1,12 +1,10 @@
-{% extends 'phrasebook/base_ita.html' %}
+{% extends 'phrasebook/base_eng_ita2.html' %}
 
-{% block title %}Italian conversational connectors{% endblock %}
+{% block title %}Italian conversational connectors | page 2{% endblock %}
 
 {% block content %}
-    <p>This is page two of the Italian conversational connectors</p>
-    <p>Translated into Italian by Gabriele Ludovici. Thanks Gabriele!</p>
-    <p>No audio and not many usage notes yet. We will most probably have them soon.</p>
-
+    <p>Translated into Italian by Gabriele Ludovici. The audio was also recorder by him. Thanks Gabriele!</p>
+    <h3><a href="{% url 'post_list4' %}">Page 1 </a>Page 2 </h3>
     {% for post in posts %}
         <div class="post">
             <table border="1" style="width:100%">
@@ -16,7 +14,8 @@
                 </tr>
                 <tr>
                     <td>{{ post.examplesent|linebreaks }}
-
+                            <a onclick="this.firstChild.play()"><audio src="{{ post.audiofilulinkki }}"></audio>
+                                <img src="/static/play.png"></a>
                     </td>
                     <td>{{ post.exampletransl|linebreaks }}</td>
                 </tr>
@@ -25,7 +24,8 @@
                 </tr>
             </table>
         </div>
-        <br>
-        <br>
     {% endfor %}
+    <h3><a href="{% url 'post_list4' %}">Page 1 </a>Page 2 </h3>
+    <br>
+    <br>
 {% endblock %}
