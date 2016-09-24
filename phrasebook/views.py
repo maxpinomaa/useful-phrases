@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.utils import timezone
 from .models import Convcon
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def post_list(request):
     posts = Convcon.objects.filter(audiofilulinkki='/static/Minuntiet.m4a') \
@@ -45,7 +46,17 @@ def post_list8(request):
     return render(request, 'phrasebook/post_list_rus.html', {'posts': posts})
 
 def post_list9(request):
-    posts = Convcon.objects.filter(tagi='rus_fun').order_by('-published_date')
+    posts = Convcon.objects.all()
+    paginator = Paginator(posts, 5)
+
+    page = request.GET.get('page')
+    try:
+        contacts = paginator.page(page)
+    except PageNotAnInteger:
+        contacts = paginator.page(1)
+    except EmptyPage:
+        contacts = paginator.page(paginator.num_pages)
+
     return render(request, 'phrasebook/rusfinfun.html', {'posts': posts})
 
 def post_list10(request):
@@ -79,6 +90,14 @@ def post_list16(request):
 def post_list17(request):
     posts = Convcon.objects.filter(tagi='fun_ita').order_by('-published_date')
     return render(request, 'phrasebook/ita_fun.html', {'posts': posts})
+
+def post_list18(request):
+    posts = Convcon.objects.filter(tagi='spa_cq').order_by('-published_date')
+    return render(request, 'phrasebook/common_questions_spa.html', {'posts': posts})
+
+def post_list19(request):
+    posts = Convcon.objects.filter(tagi='spa_cqfaf').order_by('-published_date')
+    return render(request, 'phrasebook/languages.html', {'posts': posts})
 
 
 

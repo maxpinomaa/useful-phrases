@@ -105,3 +105,16 @@ li a {
 li a:hover {
     background-color: #111;
 }
+
+.frontawesomeness {
+    padding: 0px 20px 20px 20px;
+
+}
+
+.frontlangs {
+    margin: 0px 0px 5px 0px;
+}
+
+.native-speakers {
+    padding: 0px 0px 0px 0px;
+}

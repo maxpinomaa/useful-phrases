@@ -2,7 +2,8 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.post_list, name='post_list'),
+    url(r'^$', views.post_list19, name='post_list19'),
+    url(r'^finnish/$', views.post_list, name='post_list'),
     url(r'^finnish/common_questions$', views.reverse_list, name='reverse_list'),
     url(r'^finnish/conversational/$', views.post_list1, name='post_list1'),
     url(r'^finnish/conversational2/$', views.post_list2, name='post_list2'),
@@ -21,4 +22,5 @@ urlpatterns = [
     url(r'^spanish/conversational/$', views.post_list15, name='post_list15'),
     url(r'^italian/common_questions/$', views.post_list16, name='post_list16'),
     url(r'^italian/fun_interesting/$', views.post_list17, name='post_list17'),
+    url(r'^spanish/common_questions/$', views.post_list18, name='post_list18'),
 ]
