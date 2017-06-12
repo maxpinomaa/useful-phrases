@@ -5,8 +5,6 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/phrasebook.css' %}">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     </head>
     <body>
@@ -16,7 +14,24 @@
         <div class = "content container">
             <div class = "frontawesomeness"></div>
             <p>Welcome! At this website, you can study the following languages:</p>
-                <table>
+                <table class="front-table">
+                    <tr>
+                        <td><img src="/static/spa.png"></td>
+                        <td>
+                            <h3 class="frontlangs"><a href="{% url 'post_list11' %}">Spanish</a></h3>
+                        </td>
+                        <td class = "native-speakers"><small>470 million native speakers<small></td>
+                    </tr>
+<!---
+                    <tr>
+                        <td><img src="/static/rus.png"></td>
+                        <td>
+                            <h3 class="frontlangs"><a href="http://www.languagenuggets.com/russian">Russian</a></h3>
+                        </td>
+                        <td class = "native-speakers"><small>150 million native speakers<small></td>
+                    </tr>
+--->
+
                     <tr>
                         <td><img src="/static/ita.png"></td>
                         <td>
@@ -31,16 +46,11 @@
                         </td>
                         <td class = "native-speakers"><small>5.4 million native speakers<small></td>
                     </tr>
-                        <td><img src="/static/spa.png"></td>
-                        <td>
-                            <h3 class="frontlangs">Spanish (soon)</h3>
-                        </td>
-                        <td></td>
-                    </tr>
-
                 </table>
-                <p>(more to come...)</p>
+                <p class="more-coming">(more to come...)</p>
             </div>
+
         </div>
+
     </body>
 </html>

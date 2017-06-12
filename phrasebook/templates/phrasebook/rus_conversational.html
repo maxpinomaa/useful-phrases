@@ -1,36 +1,28 @@
-{% extends 'phrasebook/base_spanish2.html' %}
+{% extends 'phrasebook/base_russian2.html' %}
 {% load staticfiles %}
-{% block title %}Spanish conversational connectors{% endblock %}
+{% block title %}Russian conversational connectors{% endblock %}
 
 {% block content %}
+<div class = "content container">
+<div class="row">
+<div class="col-md-7">
 <p>
     Conversational connectors are explained well <a href="https://sites.google.com/site/fluentczech/connectorstarterpack" target="_blank">at this website</a>.
     But in short, they are very useful because they make your sentences longer,
     and often more interesting.
     Also they give you more thinking time for the actual information you want to convey to the other person.
 </p>
-<p>
-    After you have studied the conversational connectors below, you can test them <a href="{% url 'post_list29' %}">at this page</a>.
-    The test doesn't have all of the connectors yet.
-</p>
-
-    <p>These sentences were translated into Spanish by Antuané Nieto, Rolando Wistuba Lorca, Elisa Wistuba Lorca and Silvia Verges.
+    <p>These sentences were translated into Russian by Victoria Moiseeva and Polina Zyaparova.
     Thanks a lot for your help!</p>
-
     {% for post in posts %}
         <div class="post">
             <table border='1' style="width:100%">
                 <tr>
-                    <td>
-                        {{ post.connector|linebreaks }}
-
-                    </td>
+                    <td>{{ post.connector|linebreaks }}</td>
                     <td>{{ post.contransl|linebreaks }}</td>
                 </tr>
                 <tr>
                     <td>{{ post.examplesent|linebreaks }}
-                        <a onclick="this.firstChild.play()"><audio src="{{ post.audiofilulinkki }}"></audio>
-                        <img src="/static/play.png"></a>
                     </td>
                     <td>{{ post.exampletransl|linebreaks }}</td>
                 </tr>
@@ -42,4 +34,7 @@
     {% endfor %}
     <br>
     <br>
+</div>
+</div>
+</div>
 {% endblock %}

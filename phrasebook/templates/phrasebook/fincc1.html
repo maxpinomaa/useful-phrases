@@ -1,6 +1,6 @@
 {% extends 'phrasebook/base2.html' %}
 {% load staticfiles %}
-{% block title %}Finnish conversational connectors{% endblock %}
+{% block title %}Finnish Conversational Connectors &middot; Language Nuggets{% endblock %}
 
 {% block content %}
 <p>
@@ -8,6 +8,10 @@
     But in short, conversational connnectors are very useful because they make your sentences longer,
     and often more interesting.
     Also they give you more thinking time for the actual information you want to convey to the other person.
+</p>
+<p>
+    After you have studied these conversational connectors, you can test them <a href="{% url 'post_list27' %}">at this page</a>.
+    The test doesn't have all of the connectors yet.
 </p>
     {% for post in posts %}
         <div class="post">
@@ -29,7 +33,5 @@
             </table>
         </div>
     {% endfor %}
-    <h3>Page 1 <a href="{% url 'post_list2' %}">Page 2</a></h3>
-    <br>
     <br>
 {% endblock %}

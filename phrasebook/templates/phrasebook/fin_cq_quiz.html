@@ -1,0 +1,123 @@
+{% extends 'phrasebook/base2.html' %}
+
+{% block title %}Finnish quiz{% endblock %}
+
+
+{% block content %}
+
+<div id="inputter">
+    <small><div id="questionNumber">Question 1/10</div></small>
+    <h3>How do you ask this in Finnish? (in Standard Finnish)</h3><br>
+    <span id="eng"></span> : <input type="text" id="myText" value="">
+    <button id='try' onclick="tryIt()">Try it</button><br>
+</div>
+
+<div id="output"></div>
+<div id="moreOutput"></div>
+<br><br>
+<button onclick="nextQuestion()" id="next">Next question --></button>
+<script>
+var questions = [
+  {'english': 'Where are you from?', 'finnish': 'Mistä sinä olet kotoisin?', 'finnishAlt': 'Mistä olet kotoisin?'},
+    {'english': 'What is your name?', 'finnish': 'Mikä sinun nimesi on?', 'finnishAlt': 'Mikä on sinun nimesi?'},
+  {'english': 'Where do you live?', 'finnish': 'Missä sinä asut?', 'finnishAlt': 'Missä asut?'},
+  {'english': 'What do you do in your free time?', 'finnish': 'Mitä teet vapaa-ajallasi?', 'finnishAlt': 'Mitä sinä teet vapaa-ajallasi?'},
+  {'english':'How long have you been studying Finnish?','finnish': 'Kuinka kauan sinä olet opiskellut suomea?', 'finnishAlt':'Kuinka kauan olet opiskellut suomea?'},
+  {'english':'Do you like Finnish music? (Pidätkö...)','finnish': 'Pidätkö suomalaisesta musiikista?', 'finnishAlt':'Pidätkö sinä suomalaisesta musiikista?'},
+  {'english':'How do you study Finnish?','finnish': 'Miten sinä opiskelet suomea?', 'finnishAlt':'Miten opiskelet suomea?'},
+  {'english':'What languages do you speak?','finnish': 'Mitä kieliä sinä puhut?', 'finnishAlt':'Mitä kieliä puhut?'},
+  {'english':'How old are you?','finnish': 'Minkäikäinen sinä olet?', 'finnishAlt':'Minkäikäinen olet?'},
+  {'english':'Do you like Finland? (Pidätkö...)','finnish': 'Pidätkö sinä Suomesta?', 'finnishAlt':'Pidätkö Suomesta?'},
+]
+var i = 0;
+var correct = [];
+var wrong = [];
+
+function print(message) {
+  var outputDiv = document.getElementById("moreOutput");
+  outputDiv.innerHTML = message;
+}
+
+function buildList(arr) {
+ var joined = arr.join("<br>");
+  return joined;
+}
+
+var myText = document.getElementById("myText");
+var tryButton = document.getElementById("try");
+var next = document.getElementById("next");
+var eng = document.getElementById('eng');
+
+next.style.display = 'none';
+eng.innerHTML = questions[i]['english'];
+
+function hideFunction() {
+    var x = document.getElementById('inputter');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
+
+function tryIt() {
+    var response = myText.value;
+    var right = questions[i]['finnish'];
+    var rightAlt = questions[i]['finnishAlt'];
+    fullInfo = "In English: " + questions[i]['english'] + " In Finnish: " + questions[i]['finnish'] + " OR: " + questions[i]['finnishAlt'];
+    if (response == right || response == rightAlt) {
+      var result = "correct.";
+        next.style.display = 'block';
+        hideFunction();
+        correct.push("- " + fullInfo);
+    } else {
+        var result = "wrong. The right answer is '" + right + "' OR: '" + rightAlt + "' It may be a good idea to write down the right answer in a notebook and/or say it out loud a few times. Try again later.";
+        wrong.push("- " + fullInfo);
+        next.style.display = 'block';
+        hideFunction();
+    }
+
+    document.getElementById("output").innerHTML = "Your answer is " + result;
+}
+
+function nextQuestion() {
+    i++;
+    if (i == questions.length) {
+        next.style.display = 'none';
+        html = '<h3>You got these correct</h3>';
+        if (correct.length != 0) {
+            html += buildList(correct);
+            html += '<br>';
+            eng.innerHTML = " ";
+        } else {
+            html += "-";
+        }
+        html += '<h3>You did not answer these correctly yet</h3>';
+        if (wrong.length != 0) {
+            html += buildList(wrong);
+            html += '<br>';
+            eng.innerHTML = " ";
+        } else {
+            html += "-";
+        }
+        html += '<br><br><a href="javascript:location.reload(true)">Do the test again.</a>'
+        print(html);
+    } else {
+        next.style.display = 'none';
+        hideFunction();
+        eng.innerHTML = questions[i]['english'];
+    }
+    myText.value = "";
+    document.getElementById("output").innerHTML = " ";
+    if (i != questions.length) {
+            document.getElementById("questionNumber").innerHTML = "Question " + (i+1) + "/" + questions.length;
+    } else {
+        questionNumber.innerHTML = " ";
+    }
+}
+
+</script>
+
+
+{% endblock %}

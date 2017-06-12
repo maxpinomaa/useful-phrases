@@ -5,15 +5,53 @@
     padding: 20px 0px 0px 0px;
 }
 
-.other-languages-header {
-    float:right;
-    margin-right:8px;
-}
-
 .page-header h1, .page-header h1 a:visited, .page-header h1 a:active {
     margin-left:20px;
     font-size: 36pt;
     text-decoration: none;
+    text-color: yellow;
+}
+
+h1 a:hover {
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: yellow;
+    text-decoration: none;
+}
+
+.navButton {
+    margin-right:10px;
+    padding-right:40px;
+}
+
+.footer {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
 }
 
 .news {
@@ -39,29 +77,28 @@ p.sign {
 }
 
 .row {
-    margin-top:8px;
-}
 
-.little-marg {
-        background="yellow";
 }
 
 h1, h2, h3, h4 {
-    font-family:'Passion one', bold;
+    font-family:'Passion one';
     color: black;
 
 }
 
-.top-menu, .top-menu:hover, .top-menu:visited {
-    color: gray;
-    margin-bottom:0px;
-    margin-top:0px;
-    margin-left:0px;
-    margin-right:0px;
-
-}
 
 .top-menu a {
+}
+
+.info {
+    float:right;
+    margin-right:10px;
+}
+
+.tips {
+    float: right;
+    margin-top:0px;
+    margin-right:13px;
 }
 
 
@@ -81,30 +118,7 @@ th, td {
     padding: 3px;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
 
-li {
-    float: left;
-
-}
-
-li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #111;
-}
 
 .frontawesomeness {
     padding: 0px 20px 20px 20px;
@@ -112,9 +126,26 @@ li a:hover {
 }
 
 .frontlangs {
-    margin: 0px 0px 5px 0px;
+    margin: 0px 8px 0px 0px;
 }
 
 .native-speakers {
     padding: 0px 0px 0px 0px;
 }
+
+.front-table {
+    padding: 0px 0px 20px 0px;
+}
+
+.link {
+    margin-bottom:15px;
+}
+
+.more-coming {
+    padding: 10px 0px 0px 0px;
+}
+
+.side-language-links {
+    margin-top: 20px;
+}
+

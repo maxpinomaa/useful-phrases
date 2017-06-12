@@ -64,7 +64,7 @@ def post_list10(request):
     return render(request, 'phrasebook/post_list_ita.html', {'posts': posts})
 
 def post_list11(request):
-    posts = Convcon.objects.filter(connector='hasta donde yo sé').order_by('-published_date')
+    posts = Convcon.objects.filter(connector='Me pregunto').order_by('-published_date')
     return render(request, 'phrasebook/front_spa.html', {'posts': posts})
 
 def post_list12(request):
@@ -99,7 +99,45 @@ def post_list19(request):
     posts = Convcon.objects.filter(tagi='spa_cqfaf').order_by('-published_date')
     return render(request, 'phrasebook/languages.html', {'posts': posts})
 
+def post_list20(request):
+    posts = Convcon.objects.filter(tagi='spa_cqfaf').order_by('-published_date')
+    return render(request, 'phrasebook/dialogue_fin.html', {'posts': posts})
 
+def post_list21(request):
+    posts = Convcon.objects.filter(connector='когда я был ребенком').order_by('-published_date')
+    return render(request, 'phrasebook/front_rus.html', {'posts': posts})
+
+def post_list22(request):
+    posts = Convcon.objects.filter(tagi='rus_eng_cc').order_by('-published_date')
+    return render(request, 'phrasebook/rus_conversational.html', {'posts': posts})
+
+def post_list23(request):
+    posts = Convcon.objects.filter(tagi='rus_eng_fun').order_by('-published_date')
+    return render(request, 'phrasebook/rus_fun.html', {'posts': posts})
+
+def post_list24(request):
+    posts = Convcon.objects.filter(tagi='rus_eng_cq').order_by('-published_date')
+    return render(request, 'phrasebook/common_questions_rus.html', {'posts': posts})
+
+def post_list25(request):
+    posts = Convcon.objects.filter(tagi='feafeafae').order_by('-published_date')
+    return render(request, 'phrasebook/learning_tips.html', {'posts': posts})
+
+def post_list26(request):
+    posts = Convcon.objects.filter(tagi='feafe6afae').order_by('-published_date')
+    return render(request, 'phrasebook/fin_cq_quiz.html', {'posts': posts})
+
+def post_list27(request):
+    posts = Convcon.objects.filter(tagi='feafe6afae').order_by('-published_date')
+    return render(request, 'phrasebook/fin_cc_quiz.html', {'posts': posts})
+
+def post_list28(request):
+    posts = Convcon.objects.filter(tagi='feafe6afae').order_by('-published_date')
+    return render(request, 'phrasebook/esp_cq_quiz.html', {'posts': posts})
+
+def post_list29(request):
+    posts = Convcon.objects.filter(tagi='feafe6afae').order_by('-published_date')
+    return render(request, 'phrasebook/esp_cc_quiz.html', {'posts': posts})
 
 
 

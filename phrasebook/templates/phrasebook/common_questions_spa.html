@@ -1,16 +1,32 @@
 {% extends 'phrasebook/base_spanish2.html' %}
 
+{% block title %}Common questions Spanish{% endblock %}
+
 {% block content %}
 <p>
     Armed with these, it will be easier
     for you to have small conversations with Spanish speakers in Spanish, since you will probably understand
     most of the questions.
 </p>
+<p>This material was translated into Spanish by Silvia Vergés. She also recorded the audio. Thanks a lot Silvia!</p>
+
+<p>
+    After you have studied the questions below, you can test them <a href="{% url 'post_list28' %}">at this page</a>.
+    It will only ask you to translate the
+    questions into Spanish. Understanding the questions
+    is a good first step. The answers you can practice in your conversations with Spanish.
+    You can ask your native speaker friend to tell you how to tell about your hobbies and other things in Spanish.
+    You may want to do this test (and practice answering them with your friends) multiple times. Let's not forget: Repetition is the mother of skill.
+</p>
+
     {% for post in posts %}
         <div class="post">
             <table border="1" style="width:100%">
                 <tr>
-                    <td>{{ post.connector|linebreaks }}
+                    <td>
+                        {{ post.connector|linebreaks }}
+                        <a onclick="this.firstChild.play()"><audio src="{{ post.audiofilulinkki }}"></audio>
+                        <img src="/static/play.png"></a>
                     </td>
                     <td>{{ post.contransl|linebreaks }}</td>
                 </tr>

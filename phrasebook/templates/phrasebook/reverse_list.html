@@ -1,6 +1,6 @@
 {% extends 'phrasebook/base2.html' %}
 
-{% block title %}Common questions{% endblock %}
+{% block title %}Common Questions Finnish &middot; Language Nuggets{% endblock %}
 
 
 {% block content %}
@@ -13,6 +13,13 @@
 <p>
     Only the three questions at the bottom of this page have audio at the moment. I will add the rest soon.
 </p>
+
+<p>
+    After you have studied these questions, you can test them <a href="{% url 'post_list26' %}">at this page</a>. It will only ask you to translate the
+    questions into Finnish. The answers you can practice in your conversations with Finns. Understanding the questions
+    is a good first step. You may want to do this test multiple times. Let's not forget: Repetition is the mother of skill.
+</p>
+
     {% for post in posts %}
         <div class="post">
             <table border="1" style="width:100%">

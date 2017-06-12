@@ -4,18 +4,24 @@
 
 {% block content %}
 <div class="visible-xs visible-sm">
-<p>Welcome! If you want to learn Finnish, this website may be useful for you. We will cover
-                        expressions that are useful in a conversation.
-The main example sentences will have audio which is important
+    <p>Welcome! If you want to learn Spanish, this website may be useful for you. We will cover
+        expressions that are useful in a conversation.
+        The main example sentences will have audio which is important
 for getting used to the pronounciation. Also hearing them many times will make them easier
-to memorize.</p>
+to remember.
+        </p>
 </div>
+    <p>
+        If you don't know them yet, learning the <a href="http://www.languagenuggets.com/spanish/common_questions/">common questions</a>
+        everybody asks you is a good idea. When you know them (and how to answer to them) it will be much easier
+        to have little conversations with the native speakers. Even if your vocabulary is still relatively small!
+    </p>
+    <p>
+        <a href="http://www.languagenuggets.com/spanish/conversational/">Conversational connectors</a> make your sentences longer, more interesting and more fluent.
+        An example:
+    </p>
 
-<p>This site will cover some conversational connectors.
-They are explained well <a href="https://sites.google.com/site/fluentczech/connectorstarterpack" target="_blank">at this website.</a>
-But in short, conversational connnectors are very useful because
-they make your sentences longer, and often more interesting. Also they give you more thinking time for the actual information
-you want to convey to the other person. An example:</p>
+
 
     {% for post in posts %}
         <div class="post">
@@ -25,9 +31,10 @@ you want to convey to the other person. An example:</p>
                     <td>{{ post.contransl|linebreaks }}</td>
                 </tr>
                 <tr>
-                    <td>{{ post.examplesent|linebreaks }}
+                    <td>
+                        {{ post.examplesent|linebreaks }}
                             <a onclick="this.firstChild.play()"><audio src="{{ post.audiofilulinkki }}"></audio>
-                                <img src="/static/play.png"></a>
+                            <img src="/static/play.png"></a>
                     </td>
                     <td>{{ post.exampletransl|linebreaks }}</td>
                 </tr>
@@ -37,23 +44,7 @@ you want to convey to the other person. An example:</p>
             </table>
         </div>
     {% endfor %}
-
-
-<h3><a name="more">How to use (and how not to use) this website</a></h3>
-<p>
-For more or less serious students of Finnish, this website does not pretend to be a comprehensive language course.
-There are many ways to get fluent in a language, but usually you need a combination of different methods and materials.
-I will not, for example, teach much grammar here. There are many books and websites for that.
-<p>
-This website focuses more on conversation, the amazing world of human interaction.
-</p>
-<p>
-    There are many ways that you can memorize the useful sentences that this website teaches.
-    It's probably a good idea to say them out loud.
-    You can write them down in your notes, and you can imagine different situations where you can use them.
-    And most imporantly, use them in real life, in your conversations and messages.
-    Language is a skill and we learn skills by doing (ie. talking and writing to people).
-</p>
+    <p>The audio doesn't work in the Safari browser.</p>
 <br>
 <br>
 <br>

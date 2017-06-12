@@ -10,13 +10,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     </head>
     <body>
-            <div class="tips">
-            <a href="#" class="btn btn-default btn-xs">
-                <span class="glyphicon glyphicon-info-sign"></span> About (soon)
-            </a>
-            </div>
         <div class="page-header">
-            <h1 class="header-title"><a href="/">Finnish language nuggets</a></h1>
+            <h1 class="header-title"><a href="http://www.languagenuggets.com/russian">Russian language nuggets</a></h1>
         </div>
         <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container-fluid">
@@ -29,29 +24,22 @@
             <div class="collapse navbar-collapse" id="topNavBar">
             <ul>
               <li><a class="active" href="http://www.languagenuggets.com/">Home</a></li>
-              <li><a href="{% url 'reverse_list' %}">Common questions</a></li>
-              <li><a href="{% url 'post_list1' %}">Conversational connectors</a></li>
-              <li><a href="{% url 'post_list7' %}">Funny/interesting sentences</a></li>
-                  &nbsp;&nbsp;&nbsp;
-                  <a class="btn btn-warning navbar-btn" href="{% url 'post_list25' %}" role="button" id="navButton">
-                      Learning Tips + Links</a>
+              <li><a href="{% url 'post_list24' %}">Common questions Russians will ask you</a></li>
+              <li><a href="{% url 'post_list22' %}">Conversational connectors</a></li>
+              <li><a href="http://www.languagenuggets.com/">Links (soon)</a></li>
+              <li><a href="{% url 'post_list23' %}">Funny/interesting sentences</a></li>
             </ul>
             </div>
         </nav>
 
-        <div class = "content container">
 
-            <div class="row">
-                <div class = "col-md-2 visible-md visible-lg">
-                </div>
-                </div>
-                <div class="col-md-7">
+
                 {% block content %}
                 {% endblock %}
-                </div>
+
+
 
             </div>
         </div>
-
     </body>
 </html>

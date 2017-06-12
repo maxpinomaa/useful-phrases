@@ -1,13 +1,12 @@
-{% extends 'phrasebook/base2.html' %}
+{% extends 'phrasebook/base_russian2.html' %}
 
-{% block title %}Funny/Interesting Finnish sentences &middot; Language Nuggets{% endblock %}
+{% block title %}Funny/interesting sentences{% endblock %}
 
 
 {% block content %}
 <p>
-These are funny or interesting at least in my opinion. The original English sentences come from <a href="https://tatoeba.org/eng/sentences_lists/show/6217">Tatoeba.org.</a>
-I have translated most of these into Finnish, and you can translate them into your own native tongue and post them in Tatoeba.
-This will help those who are learning your mother tongue.
+These are funny or interesting at least in my opinion.
+The original English sentences come from <a href="https://tatoeba.org/eng/sentences_lists/show/6217">Tatoeba.org.</a>
 </p>
 <p>I'm currently recording the audio for these sentences.</p>
     {% for post in posts %}
@@ -16,7 +15,6 @@ This will help those who are learning your mother tongue.
                 <tr>
                     <td>
                         {{ post.connector|linebreaks }}
-
                     </td>
                     <td>{{ post.contransl|linebreaks }}</td>
                 </tr>

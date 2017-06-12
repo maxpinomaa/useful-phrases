@@ -23,11 +23,13 @@
             </div>
             <div class="collapse navbar-collapse" id="topNavBar">
             <ul>
-              <li><a class="active" href="http://www.languagenuggets.com/">Home</a></li>
-              <li><a href="{% url 'reverse_list' %}">Common questions Finns will ask you</a></li>
+              <li><a class="active" href="{% url 'post_list11' %}">Home</a></li>
+              <li><a href="{% url 'post_list18' %}">Common questions</a></li>
               <li><a href="{% url 'post_list15' %}">Conversational connectors</a></li>
-              <li><a href="http://www.languagenuggets.com/">Links (soon)</a></li>
               <li><a href="{% url 'post_list12' %}">Funny/interesting sentences</a></li>
+              &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-warning navbar-btn" href="{% url 'post_list25' %}" role="button" id="navButton">
+                Learning Tips + Links</a>
             </ul>
             </div>
         </nav>

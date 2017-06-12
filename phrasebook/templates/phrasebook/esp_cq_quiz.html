@@ -1,0 +1,120 @@
+{% extends 'phrasebook/base_spanish2.html' %}
+
+{% block title %}Spanish Quiz - Common Questions{% endblock %}
+
+{% block content %}
+
+<div id="inputter">
+    <small><div id="questionNumber">Question 1/10</div></small>
+    <h3>How do you ask this in Spanish?</h3><br>
+    <span id="eng"></span><input type="text" id="myText" value="">
+    <button id='try' onclick="tryIt()">Try it</button><br>
+</div>
+
+<div id="output"></div>
+<div id="moreOutput"></div>
+<br><br>
+<button onclick="nextQuestion()" id="next">Next question --></button>
+<script>
+var questions = [
+    {'english':'Where are you from?', 'spanish': '¿De dónde eres?', 'spanishAlt': '-'},
+    {'english':'What is your name?', 'spanish': '¿Cómo te llamas?', 'spanishAlt': '-'},
+    {'english':'Where do you live?', 'spanish': '¿Dónde vives?', 'spanishAlt': '-'},
+    {'english':'What do you do in your free time?', 'spanish': '¿Qué haces en tu tiempo libre?', 'spanishAlt': '-'},
+    {'english':'How long have you been studying Spanish?','spanish': '¿Cuanto tiempo has estado estudiando español?', 'spanishAlt':'-'},
+    {'english':'How do you study Spanish?','spanish': '¿Cómo estudias español?', 'spanishAlt':'-'},
+    {'english':'What languages do you speak?','spanish': '¿Qué idiomas hablas?', 'spanishAlt':'-'},
+    {'english':'How old are you?','spanish': '¿Cuántos años tienes?', 'spanishAlt':'-'},
+]
+var i = 0;
+var correct = [];
+var wrong = [];
+
+function print(message) {
+  var outputDiv = document.getElementById("moreOutput");
+  outputDiv.innerHTML = message;
+}
+
+function buildList(arr) {
+ var joined = arr.join("<br>");
+  return joined;
+}
+
+var myText = document.getElementById("myText");
+var tryButton = document.getElementById("try");
+var next = document.getElementById("next");
+var eng = document.getElementById('eng');
+
+next.style.display = 'none';
+eng.innerHTML = questions[i]['english'];
+
+function hideFunction() {
+    var x = document.getElementById('inputter');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
+
+function tryIt() {
+    var response = myText.value;
+    var right = questions[i]['spanish'];
+    var rightAlt = questions[i]['spanishAlt'];
+    fullInfo = "In English: " + questions[i]['english'] + " In Spanish: " + questions[i]['spanish'] + " OR: " + questions[i]['spanishAlt'];
+    if (response == right || response == rightAlt) {
+      var result = "correct.";
+        next.style.display = 'block';
+        hideFunction();
+        correct.push("- " + fullInfo);
+    } else {
+        var result = "wrong. The right answer is '" + right + "' OR: '" + rightAlt + "' It may be a good idea to write down the right answer in a notebook and/or say it out loud a few times. Try again later.";
+        wrong.push("- " + fullInfo);
+        next.style.display = 'block';
+        hideFunction();
+    }
+
+    document.getElementById("output").innerHTML = "Your answer is " + result;
+}
+
+function nextQuestion() {
+    i++;
+    if (i == questions.length) {
+        next.style.display = 'none';
+        html = '<h3>You got these correct</h3>';
+        if (correct.length != 0) {
+            html += buildList(correct);
+            html += '<br>';
+            eng.innerHTML = " ";
+        } else {
+            html += "-";
+        }
+        html += '<h3>You did not answer these correctly yet</h3>';
+        if (wrong.length != 0) {
+            html += buildList(wrong);
+            html += '<br>';
+            eng.innerHTML = " ";
+        } else {
+            html += "-";
+        }
+        html += '<br><br><a href="javascript:location.reload(true)">Do the test again.</a>'
+        print(html);
+    } else {
+        next.style.display = 'none';
+        hideFunction();
+        eng.innerHTML = questions[i]['english'];
+    }
+    myText.value = "";
+    document.getElementById("output").innerHTML = " ";
+    if (i != questions.length) {
+            document.getElementById("questionNumber").innerHTML = "Question " + (i+1) + "/" + questions.length;
+    } else {
+        questionNumber.innerHTML = " ";
+    }
+}
+
+</script>
+
+
+{% endblock %}

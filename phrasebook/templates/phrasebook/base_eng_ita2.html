@@ -11,6 +11,11 @@
 
     </head>
     <body>
+                    <div class="tips">
+            <a href="#" class="btn btn-default btn-xs">
+                <span class="glyphicon glyphicon-info-sign"></span> About (soon)
+            </a>
+            </div>
         <div class="page-header">
             <h1 class="header-title"><a href="{% url 'post_list10' %}">Italian language nuggets</a></h1>
         </div>
@@ -25,10 +30,12 @@
             <div class="collapse navbar-collapse" id="topNavBar">
                 <ul>
                     <li><a class="active" href="{% url 'post_list10' %}">Home</a></li>
-                    <li><a href="{% url 'post_list16' %}">Common questions that Italians will ask</a></li>
+                    <li><a href="{% url 'post_list16' %}">Common questions</a></li>
                     <li><a href="{% url 'post_list4' %}">Conversational connectors</a></li>
-                    <li><a href="http://www.languagenuggets.com/">Links (soon)</a></li>
                     <li><a href="{% url 'post_list17' %}">Funny/interesting sentences</a></li>
+                                      &nbsp;&nbsp;&nbsp;
+                  <a class="btn btn-warning navbar-btn" href="{% url 'post_list25' %}" role="button" id="navButton">
+                      Learning Tips + Links</a>
                 </ul>
             </div>
         </nav>

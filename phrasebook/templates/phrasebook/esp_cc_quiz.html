@@ -1,0 +1,125 @@
+{% extends 'phrasebook/base_spanish2.html' %}
+
+{% block title %}Spanish Quiz - Conversational Connectors{% endblock %}
+
+
+{% block content %}
+
+<small><div id="questionNumber">Question 1/10</div></small>
+<div id="inputter">
+    <h3>How do you say the missing word (or sentence) in Spanish?</h3><br>
+    <span id="eng"></span> <input type="text" id="myText" value="">
+    <button id='try' onclick="tryIt()">Try it</button><br>
+</div>
+
+
+<div id="output"></div>
+<div id="moreOutput"></div>
+
+<br><br>
+<button onclick="nextQuestion()" id="next">Next question --></button>
+<script>
+var questions = [
+  {'english': '--- llevaba el casco puesto. (Fortunately).', 'spanish': 'afortunadamente', 'spanishAlt': 'por suerte'},
+    {'english': '--- hablaré español fluido (Sooner or later).', 'spanish': 'tarde o temprano', 'spanishAlt': '-'},
+  {'english': '--- si existe vida en otros planetas. (I wonder)', 'spanish': 'me pregunto', 'spanishAlt': '-'},
+  {'english': '--- los rumores no son ciertos (As far as I know).', 'spanish': 'hasta donde yo sé', 'spanishAlt': '-'},
+  {'english':'That is a good question.','spanish': 'esa es una buena pregunta.', 'spanishAlt':'esa es una buena pregunta'},
+  {'english':'--- de momento estoy ocupada. (unfortunately).','spanish': 'desafortunadamente', 'spanishAlt':'-'},
+  {'english':'That remains to be seen.','spanish': 'eso está por verse.', 'spanishAlt':'eso está por verse'},
+  {'english':'--- el clima mejore mañana. (I hope that).','spanish': 'ojalá que', 'spanishAlt':'ojalá'},
+  {'english':"--- voy a cerrar la ventana. (If you don't mind).",'spanish': 'si no te molesta', 'spanishAlt':'-'},
+  {'english':"--- va a ganar (I'm sure that).",'spanish': 'estoy segura de que', 'spanishAlt':'estoy seguro de que'},
+]
+var i = 0;
+var correct = [];
+var wrong = [];
+
+function print(message) {
+  var outputDiv = document.getElementById("moreOutput");
+  outputDiv.innerHTML = message;
+}
+
+function buildList(arr) {
+ var joined = arr.join("<br>");
+  return joined;
+}
+
+var myText = document.getElementById("myText");
+var tryButton = document.getElementById("try");
+var next = document.getElementById("next");
+var eng = document.getElementById('eng');
+
+next.style.display = 'none';
+eng.innerHTML = questions[i]['english'];
+
+function hideFunction() {
+    var x = document.getElementById('inputter');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
+
+function tryIt() {
+    var response = myText.value;
+    var right = questions[i]['spanish'];
+    var rightAlt = questions[i]['spanishAlt'];
+    response = response.toLowerCase();
+    fullInfo = questions[i]['english'] + " Right answer: " + questions[i]['spanish'] + " OR: " + questions[i]['spanishAlt'];
+    if (response == right || response == rightAlt) {
+      var result = "correct.";
+        next.style.display = 'block';
+        hideFunction();
+        correct.push(fullInfo);
+    } else {
+        var result = "wrong. The right answer is '" + right + "' OR: '" + rightAlt + "'. It may be a good idea to write down the right answer in a notebook and/or say it out loud a few times. Try again later.";
+        wrong.push(fullInfo);
+        next.style.display = 'block';
+        hideFunction();
+    }
+
+    document.getElementById("output").innerHTML = "Your answer is " + result;
+}
+
+function nextQuestion() {
+    i++;
+    if (i == questions.length) {
+        next.style.display = 'none';
+        html = '<h3>You got these correct</h3>';
+        if (correct.length != 0) {
+            html += buildList(correct);
+            html += '<br>';
+            eng.innerHTML = " ";
+        } else {
+            html += "-";
+        }
+        html += '<h3>You did not answer these correctly yet</h3>';
+        if (wrong.length != 0) {
+            html += buildList(wrong);
+            html += '<br>';
+            eng.innerHTML = " ";
+        } else {
+            html += "-";
+        }
+        html += '<br><br><a href="javascript:location.reload(true)">Do the test again.</a>'
+        print(html);
+    } else {
+        next.style.display = 'none';
+        hideFunction();
+        eng.innerHTML = questions[i]['english'];
+    }
+    myText.value = "";
+    document.getElementById("output").innerHTML = " ";
+    if (i != questions.length) {
+            document.getElementById("questionNumber").innerHTML = "Question " + (i+1) + "/" + questions.length;
+    } else {
+        questionNumber.innerHTML = " ";
+    }
+}
+
+</script>
+
+{% endblock %}
