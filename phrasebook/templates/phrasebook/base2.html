@@ -11,12 +11,13 @@
     </head>
     <body>
             <div class="tips">
-            <a href="#" class="btn btn-default btn-xs">
-                <span class="glyphicon glyphicon-info-sign"></span> About (soon)
+            <a href="http://www.languagenuggets.com/learning_tips/#info" class="btn btn-default btn-xs">
+                <span class="glyphicon glyphicon-info-sign"></span> About
             </a>
             </div>
         <div class="page-header">
-            <h1 class="header-title"><a href="/">Finnish language nuggets</a></h1>
+            <h1 class="header-title hidden-xs"><a href="{% url 'post_list' %}">Finnish Language Nuggets</h1></a>
+            <h2 class="header-title visible-xs"><a href="{% url 'post_list' %}">Finnish Language Nuggets</h2></a>
         </div>
         <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container-fluid">

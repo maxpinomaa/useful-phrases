@@ -20,13 +20,13 @@
         </p>
 --->
         <div class="tips">
-            <a href="#" class="btn btn-default btn-xs">
-                <span class="glyphicon glyphicon-info-sign"></span> About (soon)
+            <a href="http://www.languagenuggets.com/learning_tips/#info" class="btn btn-default btn-xs">
+                <span class="glyphicon glyphicon-info-sign"></span> About
             </a>
         </div>
         <div class="page-header">
-
-            <h1 class="header-title"><a href="http://www.languagenuggets.com/spanish">Spanish language nuggets</a></h1>
+            <h1 class="header-title hidden-xs"><a href="{% url 'post_list11' %}">Spanish Language Nuggets</h1></a>
+            <h2 class="header-title visible-xs"><a href="{% url 'post_list11' %}">Spanish Language Nuggets</h3></a>
         </div>
 
                 <nav class="navbar navbar-inverse navbar-static-top">
@@ -39,7 +39,7 @@
             </div>
             <div class="collapse navbar-collapse" id="topNavBar">
                 <ul>
-                  <li><a class="active" href="http://www.languagenuggets.com/">Home</a></li>
+                  <li><a class="active" href="http://www.languagenuggets.com/"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
                   <li><a href="{% url 'post_list18' %}">Common questions</a></li>
                   <li><a href="{% url 'post_list15' %}">Conversational connectors</a></li>
                   <li><a href="{% url 'post_list12' %}"> Funny/interesting sentences</a></li>
@@ -55,10 +55,9 @@
 
             <div class="row">
                 <div class = "col-md-3 visible-md visible-lg">
-                        <p>Welcome! If you want to learn Spanish, this website may be useful for you. We will cover many
-                        expressions that are useful in a conversation. The main example sentences will have audio which is important
-for getting used to the pronounciation. Also hearing them many times will make them easier
-to remember.</p>
+                        <p>
+                            (There will be content in this column soon.)
+                        </p>
                 </div>
                 <div class="col-md-7">
                 {% block content %}
