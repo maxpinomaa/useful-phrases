@@ -4,30 +4,30 @@
         <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{% static 'css/phrasebook.css' %}">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+                <link rel="stylesheet" href="{% static 'css/phrasebook.css' %}">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     </head>
     <body>
-        <div class="page-header">
-            <h1 class="header-title"><a href="http://www.languagenuggets.com/">Language nuggets</a> <small>- learning tips</small></h1>
+         <div class="tips">
+            <a href="http://www.languagenuggets.com/learning_tips/#info" class="btn btn-default btn-xs">
+                <span class="glyphicon glyphicon-info-sign"></span> About
+            </a>
         </div>
-        <!---
-        <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container-fluid">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="topNavBar">
-            <ul>
+        <div class="page-header">
+            <h1 class="header-title hidden-xs"><a href="http://www.languagenuggets.com/">Language nuggets</a> <small>- learning tips</small></h1>
+            <h2 class="header-title visible-xs"><a href="http://www.languagenuggets.com/">Language nuggets</a> <small>- learning tips</small></h2>
+        </div>
+            <ul class="visible-sm visible-md visible-lg">
+                <li><a class="active" href="http://www.languagenuggets.com/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+              <li><a href="{% url 'post_list11' %}">Learn Spanish</a></li>
+              <li><a href="http://www.languagenuggets.com/russian">Learn Russian</a></li>
+              <li><a href="{% url 'post_list10' %}">Learn Italian</a></li>
+              <li><a href="{% url 'post_list' %}">Learn Finnish</a></li>
             </ul>
             </div>
-        </nav>
-        --->
                 {% block content %}
                 {% endblock %}
 

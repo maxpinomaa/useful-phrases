@@ -3,21 +3,23 @@
     <head>
         <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{% static 'css/phrasebook.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="stylesheet" href="{% static 'css/phrasebook.css' %}">
     </head>
     <body>
+
             <div class="tips">
-            <a href="http://www.languagenuggets.com/learning_tips/#info" class="btn btn-default btn-xs">
-                <span class="glyphicon glyphicon-info-sign"></span> About
-            </a>
+                <a href="http://www.languagenuggets.com/learning_tips/#info" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-info-sign"></span>
+                    <span class="hidden-xs">Info</span>
+                </a>
             </div>
-        <div class="page-header">
-            <h1 class="header-title hidden-xs"><a href="{% url 'post_list' %}">Finnish Language Nuggets</h1></a>
-            <h2 class="header-title visible-xs"><a href="{% url 'post_list' %}">Finnish Language Nuggets</h2></a>
+
+        <div class="page-header-new">
+            <h4><a href="{% url 'post_list' %}"><span class="hidden-xs">FINNISH </span>LANGUAGE NUGGETS</a></h4>
         </div>
         <nav class="navbar navbar-inverse navbar-static-top">
             <div class="container-fluid">
@@ -29,12 +31,10 @@
             </div>
             <div class="collapse navbar-collapse" id="topNavBar">
             <ul>
-              <li><a class="active" href="http://www.languagenuggets.com/">Home</a></li>
               <li><a href="{% url 'reverse_list' %}">Common questions</a></li>
               <li><a href="{% url 'post_list1' %}">Conversational connectors</a></li>
               <li><a href="{% url 'post_list7' %}">Funny/interesting sentences</a></li>
-                  &nbsp;&nbsp;&nbsp;
-                  <a class="btn btn-warning navbar-btn" href="{% url 'post_list25' %}" role="button" id="navButton">
+              <a class="btn btn-warning navbar-btn" href="{% url 'post_list25' %}" role="button" id="navButton">
                       Learning Tips + Links</a>
             </ul>
             </div>

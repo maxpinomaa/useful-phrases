@@ -2,26 +2,33 @@
 <html>
     <head>
         <title>{% block title %}{% endblock %}</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/phrasebook.css' %}">
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     </head>
     <body>
-        <div class="page-header">
-            <h1 class="header-title"><a href="{% url 'post_list8' %}">Finnish language nuggets - финский</a></h1>
+        <div class="hidden-xs">
+        <div class="tips-two">
+            <a href="http://www.languagenuggets.com/learning_tips/#info" class="btn btn-warning btn-sm">
+                <span class="glyphicon glyphicon-info-sign"></span> Learning Tips + Links
+            </a>
+        </div>
+        </div>
+<div class="page-header-new">
+            <h4><a href="{% url 'post_list8' %}">Finnish Language Nuggets</a></h4>
+
             <div class="top-menu">
             <ul>
               <li><a class="active" href="{% url 'post_list8' %}">Home</a></li>
-              <li><a href="{% url 'post_list13' %}">Common questions Finns will ask you</a></li>
+              <li><a href="{% url 'post_list13' %}">Common questions</a></li>
               <li><a href="{% url 'post_list3' %}">Conversational connectors</a></li>
-              <li><a href="http://www.languagenuggets.com/">Links (soon)</a></li>
-              <li><a href="{% url 'post_list9' %}">Смешные / интересные предложения</a></li>
+              <li><a href="{% url 'post_list9' %}">Смешные/интересные</a></li>
             </ul>
             </div>
-        </div>
-
+</div>
         <div class = "content container">
 
             <div class="row">
