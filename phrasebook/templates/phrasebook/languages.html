@@ -14,7 +14,8 @@
         </div>
         <div class = "content container">
             <div class="row">
-                <div class = "col-sm-6">
+                <!---<div class="col-sm-1"></div>--->
+                <div class = "col-sm-5 col-md-4">
             <div class = "frontawesomeness">
                 <p><b>Here you can study the following languages:</b></p>
 
@@ -26,14 +27,14 @@
                         <td>
                             <h3 class="frontlangs"><a href="{% url 'post_list11' %}">Spanish</a></h3>
                         </td>
-                        <td class = "native-speakers"><small class="hidden-xs">470 million native speakers<small></td>
+                        <td class = "native-speakers"><small class="hidden-md hidden-sm hidden-xs">470 million native speakers<small></td>
                     </tr>
                     <tr>
                         <td><img src="/static/rus.png"></td>
                         <td>
                             <h3 class="frontlangs"><a href="http://www.languagenuggets.com/russian">Russian</a></h3>
                         </td>
-                        <td class = "native-speakers"><small class="hidden-xs">150 million (no audio yet)<small></td>
+                        <td class = "native-speakers"><small class="hidden-md hidden-sm hidden-xs">150 million </small><small class="hidden-sm">(no audio yet)</small></td>
                     </tr>
 
                     <tr>
@@ -41,14 +42,14 @@
                         <td>
                             <h3 class="frontlangs"><a href="{% url 'post_list10' %}">Italian</a></h3>
                         </td>
-                        <td class = "native-speakers"><small class="hidden-xs">65 million native speakers</small></td>
+                        <td class = "native-speakers"><small class="hidden-md hidden-sm hidden-xs">65 million native speakers</small></td>
                     </tr>
                     <tr>
                         <td><img src="/static/fin.png"></td>
                         <td>
                             <h3 class="frontlangs"><a href="{% url 'post_list' %}">Finnish</a></h3>
                         </td>
-                        <td class = "native-speakers"><small class="hidden-xs">5.4 million native speakers<small></td>
+                        <td class = "native-speakers"><small class="hidden-md hidden-sm hidden-xs">5.4 million native speakers<small></td>
                     </tr>
                 </table>
 
@@ -67,17 +68,19 @@
 
                 </div>
 
-            <div class = "col-sm-6">
+            <div class = "col-sm-6 col-md-4 col-lg-4">
                 <div class="front-tips">
                     <p><b>Quick learning tips</b></p>
                     <p>Learning languages is much easier when you follow some of the advice of experienced polyglots. It is inspiring to see interviews of people who speak 10+ languages fluently (even while having a life!). If they can do ten or more, you can easily do at least one more, right?</p>
                     <p>
-                        Experienced polyglots have found ways of making the process more fun and interesting. From my own experience I can say that life is much more fun standing on the shoulders of giants. <a href="{% url 'post_list25' %}">More info about the bigwig polyglots.</a></p>
-                    <p>Are there shortcuts to fluency? Learning a language is usually a long road, unless you are learning a language that is very similar to ones that you already know. However, in my opinion, learning <a href="{% url 'post_list25' %}">conversational connectors</a> and <a href="{% url 'post_list25' %}">common questions</a> can be seen as some sort of shortcuts.</p>
-                    <p>When are you ready to start speaking? There is no clear right or wrong answer to this. Personally I tend to start speaking very early on by learning the common questions (and answers) that I mentioned above.</p>
+                        Experienced polyglots have found ways of making the process more fun and interesting. From my own experience I can say that life "standing on the shoulders of giants" is much more fun than before. <a href="{% url 'post_list25' %}">More about the bigwig polyglots.</a></p>
+                    <p>Are there shortcuts to fluency? Learning a language is usually a long road, unless you are learning a language that is very similar to one that you already know. However, in my opinion, learning <a href="{% url 'post_list25' %}">conversational connectors</a> and <a href="{% url 'post_list25' %}">common questions</a> can be seen as some sort of shortcuts.</p>
+                    <p>When are you ready to start speaking? There is no clear right or wrong answer to this. Personally I tend to start speaking very early on by learning to deal with the common questions.</p>
                     <p><a href="{% url 'post_list25' %}">More tips</a></p>
-
                 </div>
+            </div>
+            <div class = "col-md-4">
+                <!---<img class="hidden-xs" style="max-width:100%;max-height:100%;" src="/static/pictures/welcome.png">--->
             </div>
             </div>
         </div>

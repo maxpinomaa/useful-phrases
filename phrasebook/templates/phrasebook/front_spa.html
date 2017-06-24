@@ -3,11 +3,9 @@
 {% load staticfiles %}
 
 {% block content %}
-<div class="visible-xs visible-sm">
-</div>
+<!---
 <img style="max-width:65%;max-height:65%;" src="/static/pictures/flamenco.jpeg">
-<br>
-<br>
+--->
     <p>
         In case you don't know them already, learning the <a href="http://www.languagenuggets.com/spanish/common_questions/">common questions</a>
         everybody asks you is a good idea. When you know them (and how to answer to them) it will be much easier
@@ -31,7 +29,8 @@
                     <td>
                         {{ post.examplesent|linebreaks }}
                             <a onclick="this.firstChild.play()"><audio src="{{ post.audiofilulinkki }}"></audio>
-                            <img src="/static/play.png"></a>
+                            <img src="/static/play.png">
+                            </a>
                     </td>
                     <td>{{ post.exampletransl|linebreaks }}</td>
                 </tr>

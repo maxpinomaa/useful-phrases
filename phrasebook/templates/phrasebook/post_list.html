@@ -22,8 +22,10 @@
                 </tr>
                 <tr>
                     <td>{{ post.examplesent|linebreaks }}
-                            <a onclick="this.firstChild.play()"><audio src="{{ post.audiofilulinkki }}"></audio>
-                                <img src="/static/play.png"></a>
+                            <a onclick="this.children[0].play()">
+                                <audio src="{{ post.audiofilulinkki }}" id="audio1"></audio>
+                                <img src="/static/play.png">
+                            </a>
                     </td>
                     <td>{{ post.exampletransl|linebreaks }}</td>
                 </tr>

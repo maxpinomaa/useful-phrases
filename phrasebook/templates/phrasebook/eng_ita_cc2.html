@@ -1,10 +1,10 @@
-{% extends 'phrasebook/base.html' %}
+{% extends 'phrasebook/base_eng_ita.html' %}
 
-{% block title %}Finnish conversational connectors | page 2{% endblock %}
+{% block title %}Italian conversational connectors{% endblock %}
 
 {% block content %}
-<h4>Finnish conversational connectors, page 2</h4>
-<h4><a href="{% url 'post_list1' %}">1 </a>2</h4>
+<h4>Italian conversational connectors, page 2</h4>
+<h4><a href="{% url 'post_list4' %}">1 </a>2</h4>
     {% for post in posts %}
         <div class="post">
             <table border="1" style="width:100%">
@@ -13,7 +13,7 @@
                         {{ post.connector|linebreaks }}
                             <a onclick="this.firstChild.play()"><audio src="{{ post.audiofilulinkki }}"></audio>
                                 <img src="/static/play.png"></a>
-                    </td>
+                        </td>
                     <td>{{ post.contransl|linebreaks }}</td>
                 </tr>
                 <tr>
@@ -24,7 +24,7 @@
             </table>
         </div>
     {% endfor %}
-        <h4><a href="{% url 'post_list1' %}">1 </a>2</h4>
-        <br>
-        <br>
+<h4><a href="{% url 'post_list4' %}">1 </a>2</h4>
+    <br>
+    <br>
 {% endblock %}

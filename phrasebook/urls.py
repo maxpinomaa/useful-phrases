@@ -9,7 +9,7 @@ urlpatterns = [
     url(r'^finnish/conversational2/$', views.post_list2, name='post_list2'),
     url(r'^finskiy/finruscc1/$', views.post_list3, name='post_list3'),
     url(r'^italian/conversational/$', views.post_list4, name='post_list4'),
-    url(r'^italian/conversational2/$', views.post_list5, name='post_list5'),
+    url(r'^italian/conversational_extra/$', views.post_list5, name='post_list5'),
     url(r'^fincomics/$', views.post_list6, name='post_list6'),
     url(r'^finnish/fun_interesting/$', views.post_list7, name='post_list7'),
     url(r'^finskiy/$', views.post_list8, name='post_list8'),
@@ -33,4 +33,6 @@ urlpatterns = [
     url(r'finnish/fin_cc_quiz/$', views.post_list27, name='post_list27'),
     url(r'spanish/questions_quiz/$', views.post_list28, name='post_list28'),
     url(r'spanish/conversational_quiz/$', views.post_list29, name='post_list29'),
+    url(r'italian/conversational2/$', views.post_list30, name='post_list30'),
+    url(r'spanish/conversational2/$', views.post_list31, name='post_list31'),
 ]

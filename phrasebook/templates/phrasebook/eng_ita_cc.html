@@ -3,6 +3,7 @@
 {% block title %}Italian conversational connectors{% endblock %}
 
 {% block content %}
+    <h4>Italian conversational connectors, page 1</h4>
     <p>
         Conversational connectors are explained well <a href="https://sites.google.com/site/fluentczech/connectorstarterpack" target="_blank">at this website</a>.
         But in short, they are very useful because they make your sentences longer,
@@ -10,6 +11,8 @@
         Also they give you more thinking time for the actual information you want to convey to the other person.
     </p>
     <p>Translated into Italian by Gabriele Ludovici. The audio is also by him. Thanks a lot Gabriele!</p>
+    <h4>1 <a href="{% url 'post_list30' %}">2</a></h4>
+
     {% for post in posts %}
         <div class="post">
             <table border="1" style="width:100%">
@@ -30,7 +33,7 @@
             </table>
         </div>
     {% endfor %}
-    <h3>Page 1 <a href="{% url 'post_list5' %}">Page 2</a></h3>
+    <h4>1 <a href="{% url 'post_list30' %}">2</a></h4>
     <br>
     <br>
 {% endblock %}
