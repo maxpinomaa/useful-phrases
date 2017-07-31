@@ -1,4 +1,4 @@
-{% extends 'phrasebook/base_eng_ita.html' %}
+{% extends 'phrasebook/base_eng_ita2.html' %}
 
 {% block title %}Funny/interesting sentences{% endblock %}
 
@@ -15,8 +15,6 @@ This will help those who are learning your mother tongue.
                 <tr>
                     <td>
                         {{ post.connector|linebreaks }}
-                        <a onclick="this.firstChild.play()"><audio src="{{ post.audiofilulinkki }}"></audio>
-                            <img src="/static/play.png"></a>
                     </td>
                     <td>{{ post.contransl|linebreaks }}</td>
                 </tr>

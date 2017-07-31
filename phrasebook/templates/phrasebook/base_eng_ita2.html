@@ -31,7 +31,7 @@
             </div>
             <div class="collapse navbar-collapse" id="topNavBar">
                 <ul>
-                    <li><a class="active" href="{% url 'post_list10' %}">Home</a></li>
+                    <li><a class="active" href="{% url 'post_list10' %}"><span class="glyphicon glyphicon-home">Home</a></li>
                     <li><a href="{% url 'post_list16' %}">Common questions</a></li>
                     <li><a href="{% url 'post_list4' %}">Conversational connectors</a></li>
                     <li><a href="{% url 'post_list17' %}">Funny/interesting sentences</a></li>
@@ -45,14 +45,20 @@
         <div class = "content container">
 
             <div class="row">
-                <div class = "col-md-2 visible-md visible-lg">
-                </div>
+                <div class = "col-md-3 visible-md visible-lg">
+                    <p>If you like this website, please consider a small donation via the Paypal button below. Thank you!
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="EKGZ9GHETZPVU">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </form>
                 </div>
                 <div class="col-md-7">
                 {% block content %}
                 {% endblock %}
                 </div>
-
+            </div>
             </div>
         </div>
 

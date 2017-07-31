@@ -47,18 +47,8 @@ def post_list8(request):
     return render(request, 'phrasebook/post_list_rus.html', {'posts': posts})
 
 def post_list9(request):
-    posts = Convcon.objects.all()
-    paginator = Paginator(posts, 5)
-
-    page = request.GET.get('page')
-    try:
-        contacts = paginator.page(page)
-    except PageNotAnInteger:
-        contacts = paginator.page(1)
-    except EmptyPage:
-        contacts = paginator.page(paginator.num_pages)
-
-    return render(request, 'phrasebook/rusfinfun.html', {'posts': posts})
+    posts = Convcon.objects.filter(audiofilulinkki='dfdfd').order_by('-published_date')
+    return render(request, 'phrasebook/info.html', {'posts': posts})
 
 def post_list10(request):
     posts = Convcon.objects.filter(connector='Quando ero bambino').order_by('-published_date')
