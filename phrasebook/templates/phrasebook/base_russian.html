@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="tips">
-            <a href="http://www.languagenuggets.com/learning_tips/#info" class="btn btn-default btn-xs">
+            <a href="http://www.languagenuggets.com/about" class="btn btn-default btn-xs">
                 <span class="glyphicon glyphicon-info-sign"></span> About
             </a>
         </div>
@@ -29,7 +29,7 @@
             </div>
             <div class="collapse navbar-collapse" id="topNavBar">
             <ul>
-              <li><a class="active" href="http://www.languagenuggets.com/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+              <li><a class="active" href="http://www.languagenuggets.com/"> Home</a></li>
               <li><a href="{% url 'post_list24' %}">Common questions</a></li>
               <li><a href="{% url 'post_list22' %}">Conversational connectors</a></li>
               <li><a href="{% url 'post_list23' %}">Funny/interesting sentences</a></li>
@@ -43,13 +43,18 @@
         <div class = "content container">
 
             <div class="row">
-                <div class = "col-md-3 visible-md visible-lg">
-                        <p>Welcome! If you want to learn Russian, this website may be useful for you. We will cover many
-                        expressions that are useful in a conversation.</p>
-                        <p>No audio yet here in the Russian section, sorry! I'll try to get it as soon as possible.
-                        </p>
+                 <div class = "col-sm-4 visible-sm visible-md visible-lg">
+                    <div>
+                        <img style="max-width:98%;max-height:98%;" src="/static/pictures/moscow2.jpg">
+                    </div>
+                     <br>
+                    <p>On this website, you can learn phrases that are useful in a conversation.
+                    You can also find links to other great websites and learning resources.
+                    I will also talk about tricks for fast language learning, that I have used in my own studies,
+                    and in helping my friends.
+                    </p>
                 </div>
-                <div class="col-md-7">
+                <div class="col-sm-8 col-md-5 col-lg-5 col-xl-5">
                 {% block content %}
                 {% endblock %}
                 </div>
