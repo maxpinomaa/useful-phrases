@@ -1,3 +1,8 @@
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
 .page-header {
     background-color: #b1cbbb;
     margin-top:0;
@@ -29,6 +34,14 @@
 
 h1 a:hover {
 
+}
+
+.front-small-title {
+    margin-left:20px;
+}
+
+.front-big-title {
+    margin-left:160px;
 }
 
 ul {
