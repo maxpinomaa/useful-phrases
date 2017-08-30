@@ -8,17 +8,250 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="{% static 'css/phrasebook.css' %}">
+        <style>
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.page-header {
+    background-color: #b1cbbb;
+    margin-top:0;
+    margin-bottom:0;
+    padding: 20px 0px 0px 0px;
+}
+
+.page-header-new {
+    background-color: #b1cbbb;
+    margin-top:0;
+    margin-bottom:0;
+    padding: 1px 0px 5px 5px;
+}
+
+.page-header-new h4 {
+    display: inline-block;
+    font-family: 'Patua One';
+    margin-left:10px;
+    font-size:;
+    font-weight:bold;
+}
+
+.page-header h1, .page-header h1 a:visited, .page-header h1 a:active {
+    margin-left:32px;
+    font-size: 36pt;
+    text-decoration: none;
+    text-color: yellow;
+}
+
+h1 a:hover {
+
+}
+
+.front-small-title {
+    margin-left:20px;
+}
+
+.front-big-title {
+    margin-left:160px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: yellow;
+    text-decoration: none;
+}
+
+.navButton {
+    margin-right:10px;
+    padding-right:40px;
+}
+
+.footer {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.news {
+    font-style:italic;
+}
+
+.header-title {
+    margin-left:35px;
+}
+
+p.sign {
+    float:bottom;
+    margin-left:7;
+}
+
+.content {
+    float:left;
+}
+
+.column  {
+    float:left;
+    max-width:150px;
+}
+
+.row {
+
+}
+
+h1, h2, h3 {
+    font-family:'Passion one';
+    color: black;
+
+}
+
+
+.top-menu a {
+}
+
+.info {
+    float:right;
+    margin-right:10px;
+}
+
+.tips {
+    float: right;
+    margin-top:0px;
+    margin-right:13px;
+}
+
+.tips-two {
+    float: right;
+    margin-top:10px;
+    margin-right:13px;
+}
+
+.post {
+    margin-bottom: 20px;
+}
+
+.post a {
+    cursor:pointer;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #000000;
+}
+
+th, td {
+    padding: 3px;
+}
+
+.frontawesomeness {
+    padding: 10px;
+    margin: 12px 0px 10px 0px;
+    border-radius: 25px;
+    border: 0px solid #b1cbbb;
+
+}
+
+.frontlangs {
+    margin: 0px 8px 0px 0px;
+}
+
+.front-tips {
+    margin: 12px 0px 20px 0px;
+    border-radius: 25px;
+    border: 2px solid #b1cbbb;
+    padding: 10px;
+    text-align: justify;
+}
+
+.front-info {
+    margin: 12px 0px 0px 0px;
+}
+
+
+.native-speakers {
+    padding: 0px 0px 0px 0px;
+}
+
+.front-table {
+    padding: 20px 0px 20px 0px;
+}
+
+.link {
+    margin-bottom:15px;
+}
+
+.more-coming {
+    padding: 3px 0px 0px 0px;
+}
+
+.side-language-links {
+    margin-top: 20px;
+}
+
+.container-fluid {
+    background-color: #333;
+}
+
+.navbar-toggle {
+    background-color: black;
+}
+
+.center {
+    margin: auto;
+    width: 70%;
+    padding: 10px;
+}
+
+body {
+    background-image: url("/static/pictures/madrid.jpg");
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transparent-box {
+    background:#7f7f7f;
+    background:rgba(0, 0, 0, 0.55);
+    font-size: 15px;
+    font-weight: bold;
+    margin-left:0px;
+    margin-top:5px;
+    padding: 10px;
+        border: 1px solid black;
+    border-radius: 12px;
+}
+
+    .transparent-box p {
+        color:azure;
+    }
+
+    .transparent-box a {
+        color:orange;
+    }
+
+
+</style>
     </head>
     <body>
-<!---
-        <p class="info">
-                    <a href="#">
-          <span class="glyphicon glyphicon-info-sign"></span>
-        </a>
-            Info
-        </p>
---->
         <div class="tips">
             <a href="http://www.languagenuggets.com/about" class="btn btn-default btn-xs">
                 <span class="glyphicon glyphicon-info-sign"></span> About
@@ -39,7 +272,7 @@
             </div>
             <div class="collapse navbar-collapse" id="topNavBar">
                 <ul>
-                  <li><a class="active" href="http://www.languagenuggets.com/">Home</a></li>
+                  <li><a class="active" href="http://www.languagenuggets.com/"><span class="glyphicon glyphicon-home"></span> Languages</a></li>
                   <li><a href="{% url 'post_list18' %}">Common questions</a></li>
                   <li><a href="{% url 'post_list15' %}">Conversational connectors</a></li>
                   <li><a href="{% url 'post_list12' %}"> Funny/interesting sentences</a></li>
@@ -52,28 +285,11 @@
         </nav>
 
         <div class = "content container">
-
-            <div class="row">
-                <div class = "col-sm-3 visible-md visible-lg">
-                    <p>On this website, you can learn phrases that are useful in a conversation.
-                    You can also find links to other great websites and learning resources.
-                    I will also talk about tricks for fast language learning, that I have used in my own studies,
-                    and in helping my friends.
-                    </p>
-                    <p><small>If you like this website, please consider a small donation via the Paypal button below. Thanks a lot!</small></p>
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                        <input type="hidden" name="cmd" value="_s-xclick">
-                        <input type="hidden" name="hosted_button_id" value="EKGZ9GHETZPVU">
-                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                    </form>
-                </div>
-                <div class="col-sm-7 col-lg-5">
+            <div class="row-fluid">
+                <div class="col-sm-10 col-md-8 col-lg-7">
                 {% block content %}
                 {% endblock %}
                 </div>
-
-
             </div>
         </div>
     </body>

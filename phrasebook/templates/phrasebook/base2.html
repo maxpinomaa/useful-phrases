@@ -7,7 +7,219 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <link rel="stylesheet" href="{% static 'css/phrasebook.css' %}">
+        <style>
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.page-header {
+    background-color: #b1cbbb;
+    margin-top:0;
+    margin-bottom:0;
+    padding: 20px 0px 0px 0px;
+}
+
+.page-header-new {
+    background-color: #b1cbbb;
+    margin-top:0;
+    margin-bottom:0;
+    padding: 1px 0px 5px 5px;
+}
+
+.page-header-new h4 {
+    display: inline-block;
+    font-family: 'Patua One';
+    margin-left:10px;
+    font-size:;
+    font-weight:bold;
+}
+
+.page-header h1, .page-header h1 a:visited, .page-header h1 a:active {
+    margin-left:32px;
+    font-size: 36pt;
+    text-decoration: none;
+    text-color: yellow;
+}
+
+h1 a:hover {
+
+}
+
+.front-small-title {
+    margin-left:20px;
+}
+
+.front-big-title {
+    margin-left:160px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: yellow;
+    text-decoration: none;
+}
+
+.navButton {
+    margin-right:10px;
+    padding-right:40px;
+}
+
+.footer {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.news {
+    font-style:italic;
+}
+
+.header-title {
+    margin-left:35px;
+}
+
+p.sign {
+    float:bottom;
+    margin-left:7;
+}
+
+.content {
+    float:left;
+}
+
+.column  {
+    float:left;
+    max-width:150px;
+}
+
+.row {
+
+}
+
+h1, h2, h3 {
+    font-family:'Passion one';
+    color: black;
+
+}
+
+
+.top-menu a {
+}
+
+.info {
+    float:right;
+    margin-right:10px;
+}
+
+.tips {
+    float: right;
+    margin-top:0px;
+    margin-right:13px;
+}
+
+.tips-two {
+    float: right;
+    margin-top:10px;
+    margin-right:13px;
+}
+
+.post {
+    margin-bottom: 20px;
+}
+
+.post a {
+    cursor:pointer;
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #000000;
+}
+
+th, td {
+    padding: 3px;
+}
+
+.frontawesomeness {
+    padding: 10px;
+    margin: 12px 0px 10px 0px;
+    border-radius: 25px;
+    border: 0px solid #b1cbbb;
+
+}
+
+.frontlangs {
+    margin: 0px 8px 0px 0px;
+}
+
+.front-tips {
+    margin: 12px 0px 20px 0px;
+    border-radius: 25px;
+    border: 2px solid #b1cbbb;
+    padding: 10px;
+    text-align: justify;
+}
+
+.front-info {
+    margin: 12px 0px 0px 0px;
+}
+
+
+.native-speakers {
+    padding: 0px 0px 0px 0px;
+}
+
+.front-table {
+    padding: 20px 0px 20px 0px;
+}
+
+.link {
+    margin-bottom:15px;
+}
+
+.more-coming {
+    padding: 3px 0px 0px 0px;
+}
+
+.side-language-links {
+    margin-top: 20px;
+}
+
+.container-fluid {
+    background-color: #333;
+}
+
+.navbar-toggle {
+    background-color: black;
+}
+
+.center {
+    margin: auto;
+    width: 70%;
+    padding: 10px;
+}
+</style>
     </head>
     <body>
 

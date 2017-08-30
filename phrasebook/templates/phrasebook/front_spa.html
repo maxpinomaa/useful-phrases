@@ -3,20 +3,15 @@
 {% load staticfiles %}
 
 {% block content %}
-<!---
-<img style="max-width:65%;max-height:65%;" src="/static/pictures/flamenco.jpeg">
---->
+<div class="transparent-box">
     <p>
         Learning to handle the <a href="http://www.languagenuggets.com/spanish/common_questions">common questions</a>
-        everybody asks you makes conversations much easier. It's a nice first step towards fluency.
+        makes conversations much easier. It's a nice first step towards fluency.
     </p>
     <p>
         <a href="http://www.languagenuggets.com/spanish/conversational/">Conversational connectors</a> make your sentences longer, more interesting and more fluent.
         An example:
     </p>
-
-
-
     {% for post in posts %}
         <div class="post">
             <table border="1" style="width:100%">
@@ -40,22 +35,8 @@
         </div>
     {% endfor %}
     <p>The audio doesn't work in the Safari browser.</p>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <p>The background picture is from Calle de Alcalá, Madrid.</p>
+</div>
 {% endblock %}
 
 
