@@ -1,10 +1,23 @@
 {% load staticfiles %}
 <html>
     <head>
+        <script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1158956259871619",
+    enable_page_level_ads: true
+  });
+        </script>
         <title>Language nuggets</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1158956259871619",
+    enable_page_level_ads: true
+  });
+</script>
         <style>
 .wrapper {
     width: 80%;
@@ -49,7 +62,7 @@ h1 a:hover {
 }
 
 .front-big-title {
-    margin-left:160px;
+    margin-left:20px;
 }
 
 ul {
@@ -162,11 +175,11 @@ th, td {
 
 
 .frontawesomeness {
-    padding: 10px;
+    padding: 15px;
     margin: 12px 0px 10px 0px;
     border-radius: 25px;
-    border: 0px solid #b1cbbb;
-
+    border: 1px solid #b1cbbb;
+    background-color: white;
 }
 
 .frontlangs {
@@ -174,11 +187,12 @@ th, td {
 }
 
 .front-tips {
-    margin: 12px 0px 20px 0px;
+    margin: 12px 0px 50px 0px;
     border-radius: 25px;
-    border: 2px solid #b1cbbb;
-    padding: 10px;
+    border: 1px solid #b1cbbb;
+    padding: 15px;
     text-align: justify;
+    background-color: white;
 }
 
 .front-info {
@@ -220,14 +234,25 @@ th, td {
     padding: 10px;
 }
 
-/*img:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+body {
+    background-color: #F8F8F8;
 }
-*/
+
+.wrapper {
+    background-color:white;
+    margin: 0px 10px 0px 10px;
+}
+
+
 </style>
 
     </head>
     <body>
+        <div class="tips">
+            <a href="http://www.languagenuggets.com/about" class="btn btn-default btn-xs">
+                <span class="glyphicon glyphicon-info-sign"></span> About
+            </a>
+        </div>
         <div class="page-header">
             <div class="front-big-title">
                 <h1 class="header-title hidden-xs"><a href="/">Language Nuggets</h1></a>
@@ -240,7 +265,7 @@ th, td {
         <div class = "content container">
             <div class="row">
                 <!---<div class="col-sm-1"></div>--->
-                <div class = "col-sm-5 col-md-4">
+                <div class = "col-sm-5 col-md-5 col-lg-4">
             <div class = "frontawesomeness">
                 <p><b>On this website you can study the following languages:</b></p>
 
@@ -252,14 +277,14 @@ th, td {
                         <td>
                             <h3 class="frontlangs"><a href="{% url 'post_list11' %}">Spanish</a></h3>
                         </td>
-                        <td class = "native-speakers"><small class="hidden-md hidden-sm hidden-xs">470 million native speakers<small></td>
+                        <td class = "native-speakers"><small class="hidden-sm hidden-xs">470 million native speakers<small></td>
                     </tr>
                     <tr>
                         <td><img src="/static/rus.png"></td>
                         <td>
                             <h3 class="frontlangs"><a href="http://www.languagenuggets.com/russian">Russian</a></h3>
                         </td>
-                        <td class = "native-speakers"><small class="hidden-md hidden-sm hidden-xs">150 million </small><small class="hidden-xs hidden-sm">(no audio yet)</small></td>
+                        <td class = "native-speakers"><small class="hidden-sm hidden-xs">150 million </small><small class="hidden-xs hidden-sm">(no audio yet)</small></td>
                     </tr>
 
                     <tr>
@@ -267,14 +292,14 @@ th, td {
                         <td>
                             <h3 class="frontlangs"><a href="{% url 'post_list10' %}">Italian</a></h3>
                         </td>
-                        <td class = "native-speakers"><small class="hidden-md hidden-sm hidden-xs">65 million native speakers</small></td>
+                        <td class = "native-speakers"><small class="hidden-sm hidden-xs">65 million native speakers</small></td>
                     </tr>
                     <tr>
                         <td><img src="/static/fin.png"></td>
                         <td>
                             <h3 class="frontlangs"><a href="{% url 'post_list' %}">Finnish</a></h3>
                         </td>
-                        <td class = "native-speakers"><small class="hidden-md hidden-sm hidden-xs">5.4 million native speakers<small></td>
+                        <td class = "native-speakers"><small class="hidden-sm hidden-xs">5.4 million native speakers<small></td>
                     </tr>
                 </table>
 
@@ -294,7 +319,7 @@ th, td {
 
                 </div>
 
-            <div class = "col-sm-6 col-md-4 col-lg-4">
+            <div class = "col-sm-5 col-md-5 col-lg-5">
                 <div class="front-tips">
                     <p><b>Quick learning tips (for any language)</b></p>
                     <p>Learning languages is much easier when you follow at least some of the advice of experienced polyglots.
@@ -310,20 +335,17 @@ th, td {
                     and <a href="{% url 'post_list25' %}">common questions</a> can be seen as shortcuts, or
                     at least boosts, in the road to fluency.
                     </p>
-                    There are many fun and often free resources such as the website <a href="https://www.lingq.com">LingQ</a> (and it's smartphone app)
-                    with its huge library of interesting interviews and texts with audio.
+                    There are many fun and often free resources such as the website <a href="https://www.lingq.com">LingQ</a> (and her smartphone app)
+                    with its huge library of interesting interviews and other texts - with audio.
                     I also warmly recommend the <a href="http://simplylearnlanguages.com">Simply Learn apps</a>.
                     </p>
                     <p>
                     Comics are also great because they often contain both formal and informal speech.
                     At least for me, reading fun (or serious) comics does not feel like studying, even
-                    though I sometimes use the dictionary and write down some of the sentences.
+                    though sometimes I use the dictionary and write down some of the sentences.
                     </p>
                     <p><a href="{% url 'post_list25' %}">More tips and links</a></p>
                 </div>
-            </div>
-            <div class = "col-md-4">
-                <!---<img class="hidden-xs" style="max-width:100%;max-height:100%;" src="/static/pictures/welcome.png">--->
             </div>
             </div>
         </div>

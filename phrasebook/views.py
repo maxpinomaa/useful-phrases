@@ -138,4 +138,8 @@ def post_list31(request):
     posts = Convcon.objects.filter(tagi='spa_cc2').order_by('-published_date')
     return render(request, 'phrasebook/esp_cc2.html', {'posts': posts})
 
+def post_list32(request):
+    posts = Convcon.objects.filter(tagi='sfsfafas').order_by('-published_date')
+    return render(request, 'phrasebook/links.html', {'posts': posts})
+
 

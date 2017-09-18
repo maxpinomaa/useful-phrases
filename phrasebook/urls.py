@@ -35,4 +35,5 @@ urlpatterns = [
     url(r'spanish/conversational_quiz/$', views.post_list29, name='post_list29'),
     url(r'italian/conversational2/$', views.post_list30, name='post_list30'),
     url(r'spanish/conversational2/$', views.post_list31, name='post_list31'),
+    url(r'links/$', views.post_list32, name='post_list32'),
 ]

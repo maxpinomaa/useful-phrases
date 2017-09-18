@@ -8,6 +8,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1158956259871619",
+    enable_page_level_ads: true
+  });
+</script>
         <style>
 .wrapper {
     width: 80%;
@@ -37,7 +44,7 @@
 }
 
 .page-header h1, .page-header h1 a:visited, .page-header h1 a:active {
-    margin-left:10px;
+    margin-left:15px;
     font-size: 36pt;
     text-decoration: none;
     text-color: yellow;
@@ -53,32 +60,6 @@ h1 a:hover {
 
 .front-big-title {
     margin-left:160px;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-li {
-    float: left;
-
-}
-
-li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    color: yellow;
-    text-decoration: none;
 }
 
 .navButton {
@@ -119,10 +100,15 @@ p.sign {
 
 }
 
-h1, h2, h3 {
+h1, h2 {
     font-family:'Passion one';
     color: black;
 
+}
+
+h3, h4 {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
 }
 
 
@@ -220,26 +206,25 @@ th, td {
     width: 70%;
     padding: 10px;
 }
+ul {
+    margin: 20px;
+    padding: 0;
+}
+.back {
+    margin-top:5px;
+}
 </style>
     </head>
     <body>
          <div class="tips">
-            <a href="http://www.languagenuggets.com/learning_tips/#info" class="btn btn-default btn-xs">
+            <a href="http://www.languagenuggets.com/learning_tips/about" class="btn btn-default btn-xs">
                 <span class="glyphicon glyphicon-info-sign"></span> About
             </a>
         </div>
         <div class="page-header">
-            <h1 class="header-title hidden-xs"><a href="http://www.languagenuggets.com/">Language nuggets - learning tips</a></h1>
-            <h2 class="header-title visible-xs"><a href="http://www.languagenuggets.com/">Language nuggets</a> <small>- learning tips</small></h2>
+            <h1 class="header-title hidden-xs"><a href="http://www.languagenuggets.com/">Language nuggets</a></h1>
+            <h2 class="header-title visible-xs"><a href="http://www.languagenuggets.com/">Language nuggets</a></h2>
         </div>
-            <ul class="visible-sm visible-md visible-lg">
-                <li><a class="active" href="http://www.languagenuggets.com/"><span class="glyphicon glyphicon-home"></span> Languages</a></li>
-              <li><a href="{% url 'post_list11' %}">Learn Spanish</a></li>
-              <li><a href="http://www.languagenuggets.com/russian">Learn Russian</a></li>
-              <li><a href="{% url 'post_list10' %}">Learn Italian</a></li>
-              <li><a href="{% url 'post_list' %}">Learn Finnish</a></li>
-            </ul>
-            </div>
                 {% block content %}
                 {% endblock %}
 
