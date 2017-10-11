@@ -92,13 +92,6 @@ li a:hover {
     padding-right:40px;
 }
 
-.footer {
-    right: 0;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-}
-
 .news {
     font-style:italic;
 }
@@ -226,6 +219,47 @@ th, td {
     width: 70%;
     padding: 10px;
 }
+
+.footeri {
+
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #b1cbbb;
+   color: white;
+}
+
+footer {
+    margin-left:10px;
+    margin-bottom: 20px;
+    /*border-top: 6px solid red;*/
+            }
+
+#footer-line {
+    width: 1000%;
+    margin-left: -500%;
+	border-top: 1px solid #8c8b8b;
+}
+
+@media (min-width: 769px) {
+    .footer-oneside {
+        margin-left:100px;
+
+    }
+
+}
+
+@media (min-width: 950px) {
+    .footer-oneside {
+        margin-left:300px;
+
+    }
+        .footer-rightside {
+        margin-left:100px;
+
+    }
+
+}
 </style>
     </head>
     <body>
@@ -234,7 +268,7 @@ th, td {
                 <span class="glyphicon glyphicon-info-sign"></span> About
             </a>
         </div>
-        <div class="page-header">
+        <div id="top" class="page-header">
             <h1 class="header-title hidden-xs"><a href="{% url 'post_list' %}">Finnish Language Nuggets</h1></a>
             <h2 class="header-title visible-xs"><a href="{% url 'post_list' %}">Finnish Language Nuggets</h2></a>
         </div>
@@ -274,13 +308,33 @@ th, td {
                 <div class="col-md-7">
                 {% block content %}
                 {% endblock %}
+                <br>
                 </div>
-
-
+                <br>
             </div>
-                    <footer>
-                      <p><a href="http://www.languagenuggets.com"><span class="glyphicon glyphicon-home"></span> Language Nuggets</a></p>
-                    </footer>
-        </div>
+            <footer>
+            <div class="row">
+                <div id="footer-box">
+                    <div class = "col-xs-6">
+                        <div class="footer-oneside">
+                            <p><a href="#top">Back to top &raquo;</a></p>
+                          <p><a href="http://www.languagenuggets.com">
+                            <span class="glyphicon glyphicon-home"></span> <span class="hidden-xs">Language </span>Nuggets</a></p>
+                          <p><a href="http://www.languagenuggets.com/about"><span class="glyphicon glyphicon-info-sign"></span> About</a></p>
+                          <p><a href="http://www.languagenuggets.com/learning_tips">Learning Tips + Links</a></p>
+                        </div>
+                    </div>
+                    <div class = "col-xs-6">
+                        <div class="footer-rightside">
+                        <p><a href="http://www.languagenuggets.com/finnish">Finnish Nuggets</a></p>
+                        <p><a href="http://www.languagenuggets.com/spanish">Spanish Nuggets</a></p>
+                        <p><a href="http://www.languagenuggets.com/russian">Russian Nuggets</a></p>
+                        <p><a href="http://www.languagenuggets.com/italian">Italian Nuggets</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </footer>
+              </div>
     </body>
 </html>
